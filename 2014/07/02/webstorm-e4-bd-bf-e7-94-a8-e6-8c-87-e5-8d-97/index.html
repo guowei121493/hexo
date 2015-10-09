@@ -1,0 +1,725 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="一个前端的内心独白" />
+
+
+
+  <meta name="keywords" content="水御双氛,博客,前端,javascript" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="飘水寰界" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="webstorm 非常好用&amp;nbsp;
+1.快速查找文件
+
+&amp;amp;nbsp; 双shift 查找文件
+
+&amp;amp;nbsp; shift+ctrl+N 查找项目中的文件
+
+&amp;amp;nbsp; 将文件添加入Faveratie方便查找
+
+&amp;lt;span style=&quot;font-size: 13px;&quot;&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp;ctrl+left+right看不同tab文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webstorm使用指南">
+<meta property="og:url" content="http://www.soledad.com.cn/2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/index.html">
+<meta property="og:site_name" content="飘水寰界">
+<meta property="og:description" content="webstorm 非常好用&amp;nbsp;
+1.快速查找文件
+
+&amp;amp;nbsp; 双shift 查找文件
+
+&amp;amp;nbsp; shift+ctrl+N 查找项目中的文件
+
+&amp;amp;nbsp; 将文件添加入Faveratie方便查找
+
+&amp;lt;span style=&quot;font-size: 13px;&quot;&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp;ctrl+left+right看不同tab文">
+<meta property="og:updated_time" content="2015-10-09T12:33:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webstorm使用指南">
+<meta name="twitter:description" content="webstorm 非常好用&amp;nbsp;
+1.快速查找文件
+
+&amp;amp;nbsp; 双shift 查找文件
+
+&amp;amp;nbsp; shift+ctrl+N 查找项目中的文件
+
+&amp;amp;nbsp; 将文件添加入Faveratie方便查找
+
+&amp;lt;span style=&quot;font-size: 13px;&quot;&amp;gt;&amp;amp;nbsp; &amp;amp;nbsp;ctrl+left+right看不同tab文">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> webstorm使用指南 | 飘水寰界 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?44c8c9cdf5a3db8bb69b8122c0f4b4dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">飘水寰界</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              webstorm使用指南
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-07-02T18:05:00+08:00" content="2014-07-02">
+            2014-07-02
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/未分类/" itemprop="url" rel="index">
+                  <span itemprop="name">未分类</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>webstorm 非常好用&nbsp;</p>
+<pre><code>1.快速查找文件
+
+&amp;nbsp<span class="comment">; 双shift 查找文件</span>
+
+&amp;nbsp<span class="comment">; shift+ctrl+N 查找项目中的文件</span>
+
+&amp;nbsp<span class="comment">; 将文件添加入Faveratie方便查找</span>
+
+&lt;span style="font-size: 13px<span class="comment">;"&gt;&amp;nbsp; &amp;nbsp;ctrl+left+right看不同tab文件&lt;/span&gt;</span>
+
+2.使用快捷方式（通过用快速命令行的方式进行）
+
+&amp;nbsp<span class="comment">; &amp;nbsp;按住alt+ctrl+s进入设置搜external tools</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp;创建一个新的，然后可以用命令行工具和文件夹的位置进行命令的执行</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp;一旦形成终身受用</span>
+
+3.快速查看
+
+&amp;nbsp<span class="comment">;1.shift+esc 将边栏最小化</span>
+
+&amp;nbsp<span class="comment">;2.ctrl+ +/- 将块展开或缩小</span>
+
+&lt;span style="line-height: 1.6em<span class="comment">;"&gt;&amp;nbsp; 添加注释//TODO 然后利用alt+6查找&lt;/span&gt;</span>
+</code></pre><div><br><br>        &nbsp; 按住ctrl+b查找变量<br><br>        &nbsp; ctrl+点击找到引用源位置<br><br></div>
+
+<pre><code><span class="number">4.</span>快速操作
+
+&amp;nbsp; ctrl+d 复制行
+
+&amp;nbsp; ctrl+/ ctrl+shift+/快注释
+
+<span class="number">4.</span>比较 比较历史...两文件比较
+
+很好的快捷键，任需学习
+</code></pre><table border="0" cellpadding="0" cellspacing="0" style="border-width: 1px 1px 1px 0px; border-style: solid; border-color: rgb(217, 217, 217); font-family: 微软雅黑; font-size: 14px; margin: 0px -0.083em 2.083em 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word; border-spacing: 0px; width: 849px; color: rgb(116, 116, 116); line-height: 26.600000381469727px;" width="100%"><br>    <tbody style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+/&nbsp;或&nbsp;Ctrl+Shift+/<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                注释（//&nbsp;或者/<em>&hellip;</em>/&nbsp;）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Shift+F6<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                重构-重命名<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+X<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                删除行<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+D<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                复制行<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+G<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找行<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+Shift+Up/Down<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                代码向上/下移动。<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                F2&nbsp;或Shift+F2<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                高亮错误或警告快速定位<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                写代码，按Tab<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                生成代码<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                选中文本，按Ctrl+Shift+F7<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                高亮显示所有该文本，按Esc高亮消失。(因为这个功能我就可以发放心的放弃sublime了)<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+B或Ctrl+鼠标左键单击<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                快速打开光标处的类或方法，（NB的功能）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Alt + B<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Go to implementation(s) 跳转方法实现处<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Shift + I<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Open quick definition lookup 打开定义快速查找<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Alt + Up/Down<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Go to previous/next method 跳转到上一个/下一个方法<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+E<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                最近打开的文件<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Alt+F1<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找代码所在位置<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+Alt+L<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                格式化代码<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+R<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                替换文本<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+F<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找文本<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+P<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                方法参数提示<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                F3<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找下一个<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Shift+F3<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找上一个<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                alt+Shift+F<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                将当前文件加入收藏夹<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                ctrl+alt+s<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                打开配置窗口<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                ctrl+Shift+N<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                通过文件名快速查找工程内的文件（必记）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                ctrl+Shift+alt+N<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                通过一个字符快速查找位置（必记）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Shift+enter<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                重新开始一行（无论光标在哪个位置）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl&nbsp;+&nbsp;Alt&nbsp;+&nbsp;T&nbsp;<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                with&hellip;（if, else, try, catch, for, etc）用 <em> 来围绕选中的代码行，（ </em> 包括 if 、 while 、 try catch 等）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Shift + U<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Toggle case for word at caret or selected block 光标所在位置大小写<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Delete<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Delete to word end 删除文字结束<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Backspace<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Delete to word start 删除文字开始<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + E<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Recent files popup 弹出最近打开的文件<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                F11<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Toggle bookmark 切换标记，我觉得叫书签更好，就是sublime text 的F2<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Shift + F12<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Toggle maximizing editor 切换最大化编辑器<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Alt + Shift + F<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Add to Favorites 添至收藏夹<br>            </td><br>        </tr><br>    </tbody><br></table></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/07/17/ajax-e8-b7-a8-e5-9f-9f/" rel="prev">ajax 跨域</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/05/20/position-e7-9a-84-e8-b4-af-e7-a9-bf-e4-ba-8b-e4-bb-b6/" rel="next">position的贯穿事件</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/"
+                   data-title="webstorm使用指南" data-url="http://www.soledad.com.cn/2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="水御双氛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">水御双氛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个前端的内心独白</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Carlos guo</span>
+</div>
+
+
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"soledad"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

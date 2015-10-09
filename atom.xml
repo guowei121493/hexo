@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[飘水寰界]]></title>
+  <subtitle><![CDATA[水御双氛的blog]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://www.soledad.com.cn/"/>
+  <updated>2015-10-09T12:33:51.000Z</updated>
+  <id>http://www.soledad.com.cn/</id>
+  
+  <author>
+    <name><![CDATA[Carlos guo]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[去宁波旅行]]></title>
+    <link href="http://www.soledad.com.cn/2015/10/09/%E5%8E%BB%E6%97%85%E8%A1%8C/"/>
+    <id>http://www.soledad.com.cn/2015/10/09/去旅行/</id>
+    <published>2015-10-09T06:34:36.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>最近终于熬过了各种人生艰辛之路，十一黄金周该休息一下了，报了一个途牛的三日团，不过还是挺坑的</p>
+</blockquote>
+<hr>
+<p>1.来到宁波东钱湖，小普陀</p>
+<p><img src="http://7xi5q9.com1.z0.glb.clouddn.com/15-10-9/47613268.jpg" alt=""></p>
+<p><img src="http://7xi5q9.com1.z0.glb.clouddn.com/15-10-9/67228065.jpg" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>最近终于熬过了各种人生艰辛之路，十一黄金周该休息一下了，报了一个途牛的三日团，不过还是挺坑的</p>
+</blockquote>
+<hr>
+<p>1.来到宁波东钱湖，小普陀</p>
+<p><img src="http://7xi5q9.com1.z]]>
+    </summary>
+    
+      <category term="国内" scheme="http://www.soledad.com.cn/tags/%E5%9B%BD%E5%86%85/"/>
+    
+      <category term="旅游" scheme="http://www.soledad.com.cn/tags/%E6%97%85%E6%B8%B8/"/>
+    
+      <category term="个人生活" scheme="http://www.soledad.com.cn/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[深入学习vi]]></title>
+    <link href="http://www.soledad.com.cn/2014/10/12/e6-b7-b1-e5-85-a5-e5-ad-a6-e4-b9-a0vi/"/>
+    <id>http://www.soledad.com.cn/2014/10/12/e6-b7-b1-e5-85-a5-e5-ad-a6-e4-b9-a0vi/</id>
+    <published>2014-10-12T00:21:29.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>vi是一个非常好用而且通用的编辑器，当用unix和os系统的时候都可以用到。而且如果换一台电脑，需要处理也非常得心应手，这是程序员的必备工具啊</p>
+</blockquote>
+<h3 id="vi的三种模式">vi的三种模式</h3><ol>
+<li>命令模式 &#91;在shell下输入vi file即可进入&#93; (进行复制 删除 替换 跳转等简单操作)</li>
+<li>底部模式 &#91;在命令模式下按住:进入&#93; (进行一些功能设置有点像图形界面的菜单栏)</li>
+<li>插入模式 <a href="进行最基本的文字插入">在命令行下按住a i o</a></li>
+</ol>
+<h3 id="vi的三种模式转换">vi的三种模式转换</h3><p>a.一进入vi的面板便在了vi的命令模式之下，点击a i o都可以进入</p>
+<ol>
+<li>点击i(insert)表示在当前位置插入</li>
+<li>点击a(append)表示当前文字下一行插入</li>
+<li>点击o(otherline)表示在下一行开始插入</li>
+</ol>
+<p>b.插入模式没有什么特别的就是普通的插入文字罢了。按住ESC键进入命令行模式，插入模式部分就不做讲解了。</p>
+<p>按住:进入底部工具栏</p>
+<p>所以说命令行模式是一开始进入的模式而且也相当于作为中转站进行其他模式的切换，其他模式要进入命令行模式均按住ESC即可 插入模式和底部模式之间切换均要先切换进入命令行模式然后再进行相互之间的切换。还是非常方便的</p>
+<h3 id="命令行功能">命令行功能</h3><p>一张图看看有哪些命令行模式的功能</p>
+<p><img src="http://img1.ph.126.net/LOiSRySSWnVoDAgUf3uZNw==/4807311127341480640.gif" alt=""></p>
+<h3 id="底部工具栏功能(添加:表示进入底部工作的模式)">底部工具栏功能(添加:表示进入底部工作的模式)</h3><p>1&#46;保存:w 2.退出:q 3.强制按住!</p>
+<p>保存并退出 :wq 强制退出不保存按住:q!<br>以上是最常用的一些模式</p>
+<p>比较常用的还有:set nu设置行数</p>
+<p>一张图看看有哪些命令行模式</p>
+<p><img src="http://img0.ph.126.net/iGuRXZ8DYN6mVRJRz3lNvg==/2769432295873221849.jpg" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>vi是一个非常好用而且通用的编辑器，当用unix和os系统的时候都可以用到。而且如果换一台电脑，需要处理也非常得心应手，这是程序员的必备工具啊</p>
+</blockquote>
+<h3 id="vi的三种模式">vi的三种模式</h3><ol>
+]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[深度理解git]]></title>
+    <link href="http://www.soledad.com.cn/2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/"/>
+    <id>http://www.soledad.com.cn/2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/</id>
+    <published>2014-10-06T04:08:44.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>git是一款非常独到的版本控制管理器,通过git可以方便的进行版本的管理，与svn及tfs的最大的不同是可以将各种版本的切换放在本地进行控制。是一款非常好用的方式，只在需要的时候才与远程进行同步。之前用svn和tfs也没发生多大的问题，但是其实问题很多，比如如果网断了就不能工作了，虽然版本的控制一直异常混乱，但是由于合并由人工完成而且参与同一个文件的合作机会并不是很多所以也一直没有造成太大的诟病。</p>
+<pre><code>不过问题就是这样放在那里一直就是问题的根源。当时也是UNIX的创始人也遇到如此问题，但是当时由于是收费的一些版本控制貌似还是不错的，但是由于收费而且由于当时UNIX的版本控制和其合作的很不愉快所以研发出了这个耳熟能详的版本控制工具。貌似是一个大神一周的杰作，我三番五次学了很久也没能全部了解清楚，差距啊...
+
+放在本地的版本控制工具其原理就如同打游戏一般，我将其原理在我脑中的印象以下图的方式展示出来。
+
+![](http://img1.ph.126.net/5kQd6Y42RFzFi1JyCVPyMQ==/6608948890283217814.jpg)
+
+&amp;nbsp;
+
+先说说工作区。工作区就是文件夹，也就是我们说的当前目录。这个没什么问题，是非常简单的。文件系统及其复杂，也许是由于我不懂。因为其在linux，mac及windows系统上有着完全不一样的概念。用蓝色标注的是一些理论概念的东西。黄色标注的是一些操作。
+
+先说蓝色部分。
+
+1.就是传说中的工作区，也就是我们没将其形成git的时候的初始形态。
+
+而git就相当于在此之上建立了一个工作区又边部分的版本库。
+
+2.版本库分为两个部分，1个是stage也是暂存区2.另一个是分支。
+
+如果这样说相信一定是比较难理解，其实就相当于游戏部分，我们当前玩到的关卡就是工作区。
+
+当我们需要大老怪的的时候或者需要改天玩的时候需要将其添加到缓存区。
+
+我们这里就相当于点击了游戏的保存。也相当于文件下的ctrl+s如果没有按住这个或者当时没有保存的觉悟那我们的文件版本里就完全找不到的说了。
+
+3.那分支就相当于游戏中的人物槽，或者是游戏记录。可能有好几个朋友或者不同进度需要我们进行管理
+
+所以我们一般在玩游戏的过程中先建立一个主控制槽位，也就是git中的master。
+
+游戏中我们保持版本的流程一般是不顾一切的在游戏中挥洒，到了需要的时候，点击保存，然后我们提交到记录里面，有的情况需要给记录取一个名字或自动生成一个名字以供参考我们的记录是哪一个，当我们失败或者到了下一次点击开记录的时候一切都恢复了，所以这样是很简单的一个小工具应用的感觉。
+
+4.我们当前在哪个记录或者人物槽进行游戏，当前的人物槽即为git中的HEAD
+
+5.分支上面解释过，这里就不详细说了。
+
+6.有的游戏做好了备份后可以进行云存储，这一点会比较高端，因为只有放在了云里面（其实就是远端服务器，帮你不弄丢你的存储）不会丢失记录，这个云端的git游戏备份地方默认即是origin，可以将origin对应于github的所在库。
+
+有了对git认识的概念后我们应该属性一下git的操作，这个东西学好了对工作和学习帮助不少，毕竟全世界很多有名的开源组织的代码都在git上。但是git比游戏的版本控制要强大的多了，他可以记录我们的每一次的提交修改，并且随意回到其中提交过的记录中去。
+
+<span class="keyword">*</span><span class="keyword">*</span>a.git的下载<span class="keyword">*</span><span class="keyword">*</span>
+
+<span class="variable">&lt;span style="line-height: 1.6em;"&gt;</span>要开始git的学习首先要下载git，貌似只有windows的git需要下载。而且win8及其凶残。很难安装，总之，遇到问题请百度之，这里直接进入git安装好以后的学习。<span class="variable">&lt;/span&gt;</span>
+
+<span class="keyword">*</span><span class="keyword">*</span>b.git用户生成<span class="keyword">*</span><span class="keyword">*</span>
+
+当你安装好git并将其添加到环境变量后（一般是系统自带的）我们首先对身份进行确认，这就像刚下载一个新游戏的时候需要登录和注册了。如果不登录的话，也就是在游戏中，完全没有存在感，游戏不会告诉你建的工作区这是你的而已完全没有其他的影响
+
+建立git的账户我们用
+
+git config --global user.name &amp;<span class="comment">#39;Yourname&amp;#39;</span>
+
+got config --glabal user.email &amp;<span class="comment">#39;YourEmail&amp;#39;</span>
+
+我们将真实的名字和email填入即可告诉我们的git，你现在的主人是我，我们即将开始旅程，开始工作了。
+
+<span class="keyword">*</span><span class="keyword">*</span>c.git初始化<span class="keyword">*</span><span class="keyword">*</span>
+
+我们创建好内容后我们可以，开始开动了。我们首先将代码存放的工作区也就是我们即将开始的战场清理干净，然后对其输入
+
+git init
+
+这时候我们将自己的工作区完善完成了。
+
+<span class="keyword">*</span><span class="keyword">*</span>d.git缓存区[缓存区的意义，切换分支时保存缓存区]<span class="keyword">*</span><span class="keyword">*</span>
+
+有了战场我们可以创建文件和文件夹了，毕竟这才是程序员的武器库。
+
+当我们开发的心满意足的时候我们可以将内容添加到记录里面了。
+
+添加到记录之前我们可以通过git status先看看缓存区也就是stage的记录，如果有改变和需要提交的内容我们才开始进行接下来的工作。
+
+我们发现有些修改需要提交这时候我们用黄色1的操作将其添加到工作区中。git add [要提交的文件]如果此文件夹下的所有文件都需要提交则直接git add .即可，如果每次执行这个文件但是有不想提交的内容比如系统文件，工作区文件我的WebStorm每次都会将工作区环境写入一个.idea的文件夹里，这时候我们可以在根目录下面写一个.gitignore的文件里面有我们存储每次git add .不想添加的内容。
+
+比如我不想添加.idea文件夹里面的所有内容，那么我们就再.gitignore的文件里面写一句
+
+.idea/
+
+即可。不过这时候我们输入完git add .还并没有将其添加到git游戏的记录里面，只能说存到了缓存区里面。利用git status可以看出来缓存区stage的记录，缓存区意义不大，如果需要切换分支（git游戏的记录）则必须将缓存区的内容提交到分支里，否则不能正常切其他的分支。
+
+如果不存到缓存区里面，切分支则工作区的内容会被带到其他的分支中去。那么比如我现在打怪大到一半，突然想到记录2里面有个很重要的东西去取。但是我现在的记录还不想存入记录里面。那么我们可以将文件add后将现场封锁起来，现场是另一个记录区域的存在用于存储未完成的事业，可以用git stash list来查看现场的记录。我们用git stash将现场环境压入暂时的工作区里面，等我们去记录2里面把宝藏取到后再进行记录1中未完成的事业，这种情况常见于bug存在的时候我们开发并没有完成，但是中途需要插入一个对bug修改的分支那我们必须将add过后的git分支现场封锁，然后切换到另一个分支去救火，完事后我们再回来，将这个封锁的现场打开进行工作。如果你只有一个工作区的话用版本号git statsh pop即可，如果有多个的话....首先管理已经很混乱了，可以用git stash list查看需要恢复的工作区，将相应的工作区git stash apply stash<span class="comment">@{n}恢复。然后用git stash drop stash@{n}即可。stage是工作区的概念，如果我们管理的好，那么我们只需要在提交到真正的分支上前将内容add 到stage即可，如果我们切换分支没做好准备可以将现场封锁起来对分支切换进行进一步的工作。</span>
+
+<span class="keyword">*</span><span class="keyword">*</span>e.git的回退<span class="keyword">*</span><span class="keyword">*</span>
+
+因为我们add到缓存区，stage所以我们不管添加add几次也无法在提交到分支后的记录中显示出来，所以我们可以尽可能随时add到缓存区，这样方便我们在有问题的时候可以从缓存中回退，从缓存中回退对应的是黄色圆圈的7我们因为我们当前的工作区是HEAD所以我们回退的时候只要git reset HEAD即可将内容回退到工作区，非常的方便。以上就是工作区和缓存区之间的交互了。暂时还没有到分支，如果我们做好了以上这些步骤，那么我们就可以对记录进行调整与保存了。BTW如果有删除的文件我们用git add .并不能将这个修改提交到缓存至分支上，因为我们已经将这个文件记录进缓存里了，你删了他，但是缓存区的文件并没有感知，所以如果需要删除文件的花我们需要这样git remove [文件名称]和git add .相对应。缓存区的最大的意义也就在于我们将真正的记录前留一手，避免我们在工作的时候没有后悔药吃。
+
+我们现在只是将缓存区回退了，也就是说我们现在没有要提交到分支的内容了，但是我们的文件缺还是并没有回到我们加入缓存区的那个版本，通过git status我们发现系统现在还只是提示我们还有内容没有git add需要将修改提交到缓存区。我们现在时在做恢复，我们的缓存区已经到了上一个状态，我们想让工作区里的内容回到缓存区的状态的话我们可以用git checkout [需要将修改记录回退的文件]这样我们就可以将工作区回到上一个版本了。
+
+f.git的提交
+
+git缓存区的任务完成了，我们就可以对git进行提交了，首先我们先要确认需要提交的分支，我们可以用git branch来对当下正在编辑的分支进行确认，git branch语句不仅列出了所有正在使用的分支，在当下编辑的分支前会有一个<span class="keyword">*</span>号的。默认我们应该有一个master的分支，那我们就先在这个分支上提交好了。但是实际的工作中我们应该有一个git dev的分支，所有没有问题的提交都提交到这个分支里，master作为发布版本，不能有一点的动作只有等到git dev版本的分支稳定后才将git的dev分支合并到master上去。提交到分支的语句是git commmit -m &amp;quot;注释&amp;quot;。这样我们就成功提交到当前分支了，我们可以用git log来观看我们的工作流。git log 有很多参数我们可以用git log pretty=oneline的方式将其以更舒服的方式观看，其中log里显示了很多由十六进制生成的git的提交id我们可以通过这些id来对git进行恢复操作。git loa有很多参数，我们可以用假名的方式
+</code></pre><pre style="padding: 9.5px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; margin-top: 0px; margin-bottom: 10px; line-height: 20px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; border: 1px solid rgba(0, 0, 0, 0.14902); background-color: rgb(245, 245, 245);">
+`git config --global alias.lg &quot;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;`</pre>
+
+<pre><code>这是我见过的最好的展现git的记录的方式，在以后我们只要git lg便能展现出git的各个分支提交合并的关联情况。
+
+![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138492662</span>982594cbd<span class="number">1a942114472</span>aeeb<span class="number">5f0a502</span>faed1000/0)
+
+g.git的恢复
+
+要像从git的分支中回退到工作区中比较麻烦。我们知道当前工作区是HEAD那么回退到上一个版本即是git reset --hard HEAD^ 其中^是代表上一个版本的意思，其中注意的是windows的情况下^不能正常运作，要添加git reset --hard &amp;quot<span class="comment">;HEAD^&amp;quot;来恢复即可。如果想恢复到其中某一个版本只要git reset --hard &amp;quot;版本号即可以回到任意的版本号&amp;quot;。</span>
+
+h.git的分支
+
+git如果只有一个分支就没什么意义了，同样的如果写代码只在一个里面开发的话那么不仅恢复起来比较痛苦，而且对于功能的区分不是很明显。就像游戏中的任务槽一样，如果游戏都是不断的在覆盖自己当前的记录就没什么一样，我想重新体验其中的某一关都是不行的（貌似现在的游戏都这样）git就完全不一样了。我们只要将每一个关卡（功能）开一个分支即可，而且开的新分支可以完全在之前的分支基础上建立。比如我现在要在master的基础上开一个dev的分支那么我只要用语句git checkout -b dev即可 git cehckout 分支名是转到相应分支的意思-b就是顺便创建的意思。当我开发完成git的这个分支以后我将这个功能合并到master即可。
+
+igit的分支合并
+
+git创建并转到相应的分支上的时候我们需要将此git所在分支的事情做完才可以。也就是说当前git工作区的内容全部提交到分支上，要么我们git的内容在缓存区里，并且缓存区被保存。当我们切换分支无外乎就是开发新的功能了。开发完成后就可以合并到需要合并的主分支上去。用git merge 分支名 的方式进行合并，当合并完成后我们再git branch -d 分支名(删除分支)一个完整的合并功能操作就完成了，但是这种合并仿佛我们没用到分支的感觉，如下图
+
+1。![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490879</span><span class="number">37492135</span>fbf4bbd24dfcbc<span class="number">18349a8a59</span>d<span class="number">36d000/0</span>)
+
+2.![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490882</span><span class="number">35627813</span>efe<span class="number">7649b4f00</span><span class="number">8900e5365</span>bb<span class="number">72323000/0</span>)
+
+3.![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490883</span><span class="number">510324231a83</span>7e5d4aee<span class="number">844d3e46</span>92ba<span class="number">50f5000/0</span>)
+
+4.![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490886</span>7187c83ca970bf0f46efa19badad<span class="number">99c40235000</span>/0)
+
+如果是自己的流程没什么问题，而且只要自己能够保证好之间的关系就好，但是有的时候有的老板要求很残酷的，像我以前的老板要求看到合并的流程其实是非常脑残的。那么我们可以用git merge --no-ff 分支名 -m &amp;quot<span class="comment">;注释&amp;quot;的方式记录一个合并的操作状态</span>
+
+jgit的tag及发布
+
+当我们有一个稳定的版本面世的时候我们可以将其作为一个版本的发布比如git tag v1.0这样我们就相当于给master的这个当前的状态一个可以发布的标签。当然我们也可以用git tag -d v1.0来删除这个版本，同样可以用git tag v1.0 版本名 来给当前分支的一个版本一个tag。默认的git tag是将所有的git的tag列出来。
+
+jgit的远程初始化
+
+git的远程可以选择很多不错的git库存放，可以自己搭建linux一般水平如我可以通过github来进行代码的存放。只要在github上注册一个账号并点击右上角的加号，点击create repository即可以添加一个库。添加好了库，可以将远程的库clone到本地，作为远程库的一个副本。通过git clone 远程库名称。远程库名称有两种一种是https协议的和git@github.com/用户名/git库名.git后一种速度明显优于前面。从远程clone过来的库是将远程的库clone过来，如果远程已经有不错的开源库这样是非常方便的，如果你像将本地的库推送到远端的空库中可以通过git remote add origin 远程库名可以将库的名称添加到本地对应的地方，然后初次的时候通过git push -u origin master即可.同样本地的库分支推到远程可以用git push origin branchname，本地的tag推送到远程可以用git push origin tagname。能推送的首要是确保你有推送权限，推送的权限一般会给本地的机器一个ssh-keygen。通过ssh-keygen -t rsa -C &amp;quot<span class="comment">;username@github.com&amp;quot;可以通过此种方式注册（windows上必须用powerpc等gitshell才可以，直接将git加入环境变量是不可取的）然后按照提示提交key的存储位置和密码。如果默认存储位置和密码为空一路回车就可以了，然后找到相应的id_rsa.pub（我的默认生成在mac里是User/username/.ssh/id_rsa.pub）之类的公开类复制好，黏贴到github的setting里的deploy key里为这个可以添加一个名字即可。</span>
+
+但是这个很坑爹的是，如果你已经给一个库一个key以后这个key就不能再给其他repo用了，添加的时候就会提示，如果在一台电脑上同时操作两个库的话，push的时候就会提示两个库的key有冲突或者没有权限提交...种种，所以记得一台电脑当下智能推送一个有key的repo如果有其他repo需要的话，先把用过这个库的repo的key删掉，然后用在当下编辑的库中。具体觉得不应该如此，所以会进一步做一下研究的。
+
+kgit的远程推送和获取最新
+
+如果是多人合作那么务必记得要git pull一下之后解决conflict并commit到分支后再push。git pull即是讲所有的文件从远程更新到本地。
+
+而且git里有一个wiki也有一个git的版本，觉得这是一个很好的记录学习状态的方式。
+
+l对其他开源库的操作。
+
+如果需要对其他库操作，那么可以点击右上角的fork标志
+
+fork后到自己的名下生成一个类似的库的内容，这时候你可以在你自己的库里随意的进行更新推送，然后觉得有必要将自己的代码融入进开源的世界可以发一个pull request来请求作者把自己的修改融入进去。
+
+好久没写blog说实话感觉自己的blog写的很凌乱，主要是内容太多了，自己学习的话非常容易，总结确实不是一个容易的事情，但是不总结的话很容易忘掉而且前进也有瓶颈，一般的学习看视频我都懒得看感觉太浪费时间，写blog是一个更加残酷的现实。希望以后可以提升自己写blog的经验，同时发信息要写一个blog也不是那么容易的事情，我会继续努力花时间改善的，我想以后的内容和经验可以分章节写在不同主题里面。希望大家提出宝贵的意见
+
+我这次的git学习的道路感谢这篇blog对我的启发。
+
+[http://www.liaoxuefeng.com/wiki/<span class="number">00137395163</span><span class="number">05929606</span>dd<span class="number">18361248578</span>c<span class="number">67b8067c8</span>c<span class="number">017b000</span>](http://www.liaoxuefeng.com/wiki/<span class="number">00137395163</span><span class="number">05929606</span>dd<span class="number">18361248578</span>c<span class="number">67b8067c8</span>c<span class="number">017b000</span>)
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>git是一款非常独到的版本控制管理器,通过git可以方便的进行版本的管理，与svn及tfs的最大的不同是可以将各种版本的切换放在本地进行控制。是一款非常好用的方式，只在需要的时候才与远程进行同步。之前用svn和tfs也没发生多大的问题，但是其实问题很多，比如如果网断了就不能]]>
+    </summary>
+    
+      <category term="git" scheme="http://www.soledad.com.cn/categories/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[android webview远程调试]]></title>
+    <link href="http://www.soledad.com.cn/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/"/>
+    <id>http://www.soledad.com.cn/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/</id>
+    <published>2014-08-18T10:12:31.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>Android&nbsp;webview远程调试之前只是有耳闻过，一直没有实操过。因为和开发ios一样，门槛比较高。</p>
+<pre><code>但毕竟是屌丝领军所以还好，唯一的条件是需要有一个android4.0版本以上配置的机器（也还好现在很多厂商已经可以配上了）。
+
+还好当时买了个nesus10而且对于生活已经渐渐的离不开了。这货可以直接升级到nesus4.4...
+
+&amp;nbsp<span class="comment">;</span>
+
+1.好了废话不多说，首先一切的开始源于APP是否加了可以让webview能够调试的代码
+
+代码如下
+
+要在apk的manifest里面加上这么一句
+
+在android开发的时候配置文件manifest中需要加一段 &amp;nbsp<span class="comment">;详见https://developer.chrome.com/extensions/debugger&amp;nbsp;</span>
+
+{
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;&amp;quot;name&amp;quot;: &amp;quot;My extension&amp;quot;,</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;...</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;&amp;quot;permissions&amp;quot;: [</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;quot;debugger&amp;quot;,</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;],</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;...</span>
+
+}
+
+然后还要在Main文件里加上这个句
+</code></pre><pre class="prettyprint" style="padding: 0.99em; margin-top: 2em; margin-bottom: 2em; box-sizing: border-box; font-family: 'Source Code Pro', sans-serif; font-size: 0.95em; word-wrap: break-word; box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px, rgba(0, 0, 0, 0.14902) 0px 0px 3px; position: relative; overflow-x: auto; line-height: 1.8em; color: rgb(0, 136, 0); background-color: rgb(247, 247, 247);">
+<span class="kwd" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 136);">if</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">Build</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">VERSION</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">SDK_INT </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">&gt;=</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">Build</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">VERSION_CODES</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">KITKAT</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+    </span><span class="kwd" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 136);">if</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="lit" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 102, 102);">0</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">!=</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> getApplcationInfo</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">().</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">flags </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">&amp;=</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">ApplicationInfo</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">FLAG_DEBUGGABLE </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+        </span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">WebView</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">setWebContentsDebuggingEnabled</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="kwd" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 136);">true</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+    </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">}</span></pre>
+
+<pre><code>详见：https:<span class="comment">//developer.chrome.com/devtools/docs/remote-debugging#debugging-webviews</span>
+
+<span class="number">2.</span>插上设备的USB后进行OEM的安装
+
+详见http:<span class="comment">//developer.android.com/tools/extras/oem-usb.html</span>
+
+不过这里有个地方就是如果是三星或者google得下一份驱动到本地然后将自动安装的驱动改为本地的驱动
+
+我的nesus10也不例外。当然更淫荡的是除了原生的驱动也许还有interface之类的驱动也得完美无缺的装上。
+
+安装方式【以win7为例】
+
+<span class="number">1.</span>链接设备
+
+<span class="number">2.</span>点击我的电脑右键选择管理
+
+![](http:<span class="comment">//t3.qpic.cn/mblogpic/c44eaa126aea0ec3c4ee/2000)</span>
+
+<span class="number">3.</span>选择设备管理器
+
+<span class="number">4.</span>找到相应的设备后
+
+<span class="number">5.</span>点击右键选择更新驱动软件
+
+![](http:<span class="comment">//t3.qpic.cn/mblogpic/b86e12a8d73661b07fe8/2000)</span>
+
+<span class="number">6.</span>选择浏览计算机以查找驱动程序软件
+
+![](http:<span class="comment">//t3.qpic.cn/mblogpic/0f03ed7ea8b5e4a533c2/2000)</span>
+
+&amp;nbsp; （根据这里面的说明安装http:<span class="comment">//developer.android.com/tools/extras/oem-usb.html）我由于是googleNesus系列就用了http://developer.android.com/sdk/win-usb.html</span>
+
+<span class="number">7.</span>点击下一步安装驱动
+
+这时候打开就可以看到了
+
+点击inspect进入调试模式（这里如果第一次进的话，不白屏的话，那我就跪了）
+
+&amp;nbsp;
+
+这个白屏的问题花了我一下午时间啊。
+
+找了一下原因原来是有两个变量undefined[
+</code></pre><pre class="default prettyprint prettyprinted" style="margin-top: 0px; margin-bottom: 10px; padding: 5px; border: 0px; font-size: 14px; vertical-align: baseline; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; overflow: auto; width: auto; max-height: 600px; word-wrap: normal; color: rgb(0, 0, 0); line-height: 17.804800033569336px; background: rgb(238, 238, 238);">
+`<span class="str" style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; color: rgb(128, 0, 0); background: transparent;">Uncaught ReferenceError: InspectorFrontendAPI is not defined</span>`</pre>
+
+<pre><code>&amp;nbsp<span class="comment">;</span>
+</code></pre><pre class="default prettyprint prettyprinted" style="margin-top: 0px; margin-bottom: 10px; padding: 5px; border: 0px; font-size: 14px; vertical-align: baseline; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; overflow: auto; width: auto; max-height: 600px; word-wrap: normal; color: rgb(0, 0, 0); line-height: 17.804800033569336px; background: rgb(238, 238, 238);">
+`<span class="str" style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; color: rgb(128, 0, 0); background: transparent;">Uncaught ReferenceError: WebInspector is not defined</span>`</pre>
+
+<pre><code>]
+
+找了半天确实stackoverflow上有一篇一样的问题，但是没人回答...
+
+<span class="symbol">http:</span>/<span class="regexp">/stackoverflow.com/questions</span><span class="regexp">/21801324/inspectorfrontendapi</span>-is-not-defined-during-chrome-remote-debugging
+
+又用fiddler抓包工具发现...尼玛中国太给力了，不然技术员怎么能锻炼出解决问题的能力呢，是将里面的链接给强了，而且这个强的不是一般的厉害。
+
+我用了三种代理的方式翻墙，facebook都看腻了还是访问不到,最后只好全局设置vpn（推荐greenvpn免费）...最终解决了，不过还好这个访问的是配置文件，也就是说执行完一次如果保存成功，将不再继续访问了。
+
+好了，大功告成，慢慢打断点调试吧.
+
+![](<span class="symbol">http:</span>/<span class="regexp">/t3.qpic.cn/mblogpic</span><span class="regexp">/60213ed62707d918a722/</span><span class="number">460</span>)
+
+参考文章
+
+<span class="symbol">https:</span>/<span class="regexp">/developer.chrome.com/devtools</span><span class="regexp">/docs/remote</span>-debugging
+
+<span class="symbol">https:</span>/<span class="regexp">/developer.chrome.com/devtools</span><span class="regexp">/docs/debugger</span>-protocol
+
+<span class="symbol">https:</span>/<span class="regexp">/developer.chrome.com/extensions</span><span class="regexp">/debugger
+
+http:/</span><span class="regexp">/developer.android.com/tools</span><span class="regexp">/extras/oem</span>-usb.html
+
+<span class="symbol">http:</span>/<span class="regexp">/developer.android.com/tools</span><span class="regexp">/device.html
+
+&amp;nbsp;
+
+&amp;nbsp;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>Android&nbsp;webview远程调试之前只是有耳闻过，一直没有实操过。因为和开发ios一样，门槛比较高。</p>
+<pre><code>但毕竟是屌丝领军所以还好，唯一的条件是需要有一个android4.0版本以上配置的机器（也还好现在很多厂商已经可以配上了）。
+]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[版本号的语义化]]></title>
+    <link href="http://www.soledad.com.cn/2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/"/>
+    <id>http://www.soledad.com.cn/2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/</id>
+    <published>2014-08-18T01:42:05.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>最近生活有些颓废，大概是比较乱没有一个方向，这之间和客户的纠缠让我感到神情疲惫，尤其是精力分散了好多。</p>
+<pre><code>而且老大还邀请一起写书，朋友创业支持，老婆也需要陪，我身上的肉也要我锻炼，衣服也要洗，每天各种纠缠的小细节，让我需要沉淀一下。
+
+还好最近工作没什么内容，不然要死了。工作没内容也是非常的发慌的。
+
+话说我真的对什么客户的来说非常的给脸色，见到脾气这么好的顾客还真的是非常的运气。
+
+近期在学nodejs。因为考虑到，Nodejs这个东西<span class="number">09</span>年就出来了
+
+<span class="number">11</span>年引入国内后，记得很清晰，<span class="number">13</span>年反反复复几次研究这个东西，用express写了两回blog依然没有把他拿下。
+
+现在感觉NODE作为中间层对前端的工作有非常大而且积极的影响，所以感觉这次如果再不拿下就老了，况且工作中已经各种融合了NODEjs
+
+所以这次一定要学会，尤其是BIGPIPE技术，淘宝已经做到了，一定要坚持下去，所以我要在此开辟一个专门学习Nodejs的小专栏。
+
+而且是不同的细节方面都要全力的进行。
+
+今天研究了解到的是之前一直没有关注的版本号，版本号这个东西，之前只是一直在用，只是觉得<span class="number">2.0</span><span class="number">.0</span>一定大于<span class="number">1.0</span><span class="number">.0</span>哪个字母代表什么意思没有深究。
+
+今天看了这篇文章http:<span class="comment">//semver.org/lang/zh-CN/恍然大悟。</span>
+
+三个版本号都分别代表的是
+</code></pre><ol>
+<li>主版本号：当你做了不兼容的API 修改，</li>
+<li>次版本号：当你做了向下兼容的功能性新增，</li>
+<li><p>修订号：当你做了向下兼容的问题修正。</p>
+<p>所以</p>
+<p>以下关键词MUST、MUST NOT、REQUIRED、SHALL、SHALL NOT、SHOULD、SHOULD NOT、 RECOMMENDED、MAY、OPTIONAL 依照RFC 2119 的叙述解读。（译注：为了保持语句顺畅， 以下文件遇到的关键词将依照整句语义进行翻译，在此先不进行个别翻译。）</p>
+<p>使用语义化版本控制的软件&ldquo;必须MUST&rdquo;定义公共API。该API可以在代码中被定义或出现于严谨的文件内。无论何种形式都应该力求精确且完整。</p>
+<p>标准的版本号&ldquo;必须MUST&rdquo;采用XYZ的格式，​​ 其中X、Y和Z为非负的整数，且&ldquo;禁止MUST NOT&rdquo;在数字前方补零。X是主版本号、Y是次版本号、而Z为修订号。每个元素&ldquo;必须MUST&rdquo;以数值来递增。例如：1.9.1 -&gt; 1.10.0 -&gt; 1.11.0。</p>
+<p>标记版本号的软件发行后，&ldquo;禁止MUST NOT&rdquo;改变该版本软件的内容。任何修改都&ldquo;必须MUST&rdquo;以新版本发行。</p>
+<p>主版本号为零（0.yz）的软件处于开发初始阶段，一切都可能随时被改变。这样的公共API 不应该被视为稳定版。</p>
+<p>1.0.0 的版本号用于界定公共API 的形成。这一版本之后所有的版本号更新都基于公共API 及其修改内容。</p>
+<p>修订号Z（xyZ | x &gt; 0）&ldquo;必须MUST&rdquo;在只做了向下兼容的修正时才递增。这里的修正指的是针对不正确结果而进行的内部修改。</p>
+<p>次版本号Y（xYz | x &gt; 0）&ldquo;必须MUST&rdquo;在有向下兼容的新功能出现时递增。在任何公共API的功能被标记为弃用时也&ldquo;必须MUST&rdquo;递增。也&ldquo;可以MAY&rdquo;在内部程序有大量新功能或改进被加入时递增，其中&ldquo;可以MAY&rdquo;包括修订级别的改变。每当次版本号递增时，修订号&ldquo;必须MUST&rdquo;归零。</p>
+<p>主版本号X（Xyz | X &gt; 0）&ldquo;必须MUST&rdquo;在有任何不兼容的修改被加入公共API时递增。其中&ldquo;可以MAY&rdquo;包括次版本号及修订级别的改变。每当主版本号递增时，次版本号和修订号&ldquo;必须MUST&rdquo;归零。</p>
+<p>先行版本号&ldquo;可以MAY&rdquo;被标注在修订版之后，先加上一个连接号再加上一连串以句点分隔的标识符号来修饰。标识符号&ldquo;必须MUST&rdquo;由ASCII码的英数字和连接号[0-9A-Za-z-]组成，且&ldquo;禁止MUST NOT&rdquo;留白。数字型的标识符号&ldquo;禁止MUST NOT&rdquo;在前方补零。先行版的优先级低于相关联的标准版本。被标上先行版本号则表示这个版本并非稳定而且可能无法达到兼容的需求。范例：1.0​​.0-alpha、1.0.0-alpha.1、 1.0.0-0.3.7、1.0.0-x.7.z.92。</p>
+<p>版本编译信息&ldquo;可以MAY&rdquo;被标注在修订版或先行版本号之后，先加上一个加号再加上一连串以句点分隔的标识符号来修饰。标识符号&ldquo;必须MUST&rdquo;由ASCII的英数字和连接号[0-9A-Za-z-]组成，且&ldquo;禁止MUST NOT&rdquo;留白。当判断版本的优先层级时，版本编译信息&ldquo;可SHOULD&rdquo;被忽略。因此当两个版本只有在版本编译信息有差别时，属于相同的优先层级。范例：1.0.0-alpha+001、1.0.0+20130313144700、 1.0.0-beta+exp.sha.5114f85。</p>
+<p>版本的优先层级指的是不同版本在排序时如何比较。判断优先层级时，&ldquo;必须MUST&rdquo;把版本依序拆分为主版本号、次版本号、修订号及先行版本号后进行比较（版本编译信息不在这份比较的列表中）。由左到右依序比较每个标识符号，第一个差异值用来决定优先层级：主版本号、次版本号及修订号以数值比较，例如1.0.0 &lt; 2.0.0 &lt; 2.1.0 &lt; 2.1.1。当主版本号、次版本号及修订号都相同时，改以优先层级比较低的先行版本号决定。例如：1.0.0-alpha &lt; 1.0.0。有相同主版本号、次版本号及修订号的两个先行版本号，其优先层级&ldquo;必须MUST&rdquo;透过由左到右的每个被句点分隔的标识符号来比较，直到找到一个差异值后决定：只有数字的标识符号以数值高低比较，有字母或连接号时则逐字以ASCII的排序来比较。数字的标识符号比非数字的标识符号优先层级低。若开头的标识符号都相同时，栏 ​​位比较多的先行版本号优先层级比较高。范例：1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0- rc.1 &lt; 1.0.0。</p>
+<p>一般来说项目的开始时是0.0.1启动的，然后根据需要可以拓展分支用MAY的方式在标准版本号之后建立-alpha或者alpha.beta进行开发。开发后融入主版本号中。主版本号在有稳定的版本时生成.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近生活有些颓废，大概是比较乱没有一个方向，这之间和客户的纠缠让我感到神情疲惫，尤其是精力分散了好多。</p>
+<pre><code>而且老大还邀请一起写书，朋友创业支持，老婆也需要陪，我身上的肉也要我锻炼，衣服也要洗，每天各种纠缠的小细节，让我需要沉淀一下。
+
+还好最近工]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MOOC 在线课堂【有空也得学习一下】]]></title>
+    <link href="http://www.soledad.com.cn/2014/07/18/mooc-e5-9c-a8-e7-ba-bf-e8-af-be-e5-a0-82-e3-80-90-e6-9c-89-e7-a9-ba-e4-b9-9f-e5-be-97-e5-ad-a6-e4-b9-a0-e4-b8-80-e4-b8-8b-e3-80-91/"/>
+    <id>http://www.soledad.com.cn/2014/07/18/mooc-e5-9c-a8-e7-ba-bf-e8-af-be-e5-a0-82-e3-80-90-e6-9c-89-e7-a9-ba-e4-b9-9f-e5-be-97-e5-ad-a6-e4-b9-a0-e4-b8-80-e4-b8-8b-e3-80-91/</id>
+    <published>2014-07-18T06:15:45.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>##<br>    概念介绍</p>
+<pre><code>MOOC（Massive Open Online Courses）是大规模在线开放课程，简单来说就是把各学校的课程放到互联网上，对所有人开放共享。
+
+MOOC 是一个理念，就如 Open Source 一样，与之对应的是传统学校授课方式。MOOC 的理念雏形，历史可追溯到 <span class="number">1890</span> 年代。MOOC 正式提出是在 <span class="number">2008</span> 年，之后特别是 <span class="number">2012</span> 年发展迅猛。
+
+目前提供 MOOC 课程的优秀网站有：
+</code></pre><ol>
+<li><a href="https://www.coursera.org/" target="_blank" rel="external">https://www.coursera.org/</a>&nbsp;– 拥有大量合作机构、课程最多</li>
+<li><a href="https://www.udacity.com/" target="_blank" rel="external">https://www.udacity.com/</a>&nbsp;– 有不少计算机类课程</li>
+<li><a href="https://www.edx.org/" target="_blank" rel="external">https://www.edx.org/</a>&nbsp;– 哈佛、麻省理工、伯克利等大学在这里，拥有著名的 CS50 等课程</li>
+<li><p><a href="https://www.khanacademy.org/" target="_blank" rel="external">https://www.khanacademy.org/</a>&nbsp;– 可汗学院，拥有很多理工科课程</p>
+<p>Coursera、Udacity、edX、Khan 与哈佛、斯坦福、普林斯顿等著名高校合作，推出了一系列高质量课程。以 Coursera 为例，目前合作机构超过 100 个，包括北京大学、 台湾国立大学、东京大学等，总课程有 500 多个，内含不少中文课程。</p>
+<p>国内也有跟进者：</p>
+</li>
+<li><p><a href="http://xuetangx.com/" target="_blank" rel="external">http://xuetangx.com/</a>&nbsp;– 清华大学基于 OpenEdX 搭建的平台</p>
+</li>
+<li><a href="http://mooc.guokr.com/" target="_blank" rel="external">http://mooc.guokr.com/</a>&nbsp;– 果壳出品的 MOOC 学院，以信息聚集为主</li>
+<li><p><a href="http://open.163.com/" target="_blank" rel="external">http://open.163.com/</a>&nbsp;– 网易公开课</p>
+<p>英国、德国、澳大利亚等国也涌现了不少优秀 MOOC 网站，可参考：&nbsp;<a href="http://www.36kr.com/p/208630.html" target="_blank" rel="external">http://www.36kr.com/p/208630.html</a></p>
+</li>
+</ol>
+<p>##<br>    课程特点</p>
+<pre><code>在国内，很多人可能通过网易公开课欣赏过哈佛等名校的课程。到目前为止，网易公开课的形式依旧是视频，缺少其他辅助。Coursera 等网站在课程设计上非常花心思，已经逐步形成了真正的在线课程：
+</code></pre><ol>
+<li><strong>课程规划</strong>。有开课周期，就像在大学选修一样，有些课程错过了，就只能等下一期。</li>
+<li><strong>资料齐全</strong>。提供授课视频、字幕、授课资料、参考书籍等，大部分可下载离线反复学习，非常方便。</li>
+<li><strong>学习过程</strong>。资料是逐步放出来的，看完视频后有小考，每周有作业，就像在大学一样。</li>
+<li><strong>学习社区</strong>。拥有真正的社区，热门的课程经常有几千人参与。教授，牛人、全球各路大虾云集。</li>
+<li><p><strong>证书激励</strong>。有期末考试，通过的还会颁发证书。据说这个证书，Google 等企业会认。</p>
+<p>MOOC 越来越像真实的课堂，汲取了大学课程设计的很多优点，同时利用互联网，向全世界开放。</p>
+</li>
+</ol>
+<p>##<br>    盈利模式</p>
+<pre><code>截至 <span class="number">2013</span> 年底，Coursera B 轮融资已达 <span class="number">6300</span> 万美元。站在使用者的角度来看，MOOC 网站的盈利模式至少有以下几项：
+</code></pre><ol>
+<li><strong>收费课程</strong>。目前已有不少收费课程，几十美刀一门课。与线下大学相比，这是白菜价。只要能学有所得，用户就很愿意付这笔钱。</li>
+<li><strong>猎头服务</strong>。与 Google、Facebook 等合作，直接将课程学习优异者推送给企业。现在已经有学生在简历上自主写上在线课程的学习分数。</li>
+<li><p><strong>职业培训</strong>。比如 Udacity 将重心放在了科技行业的职前培训。在国内，做好的话或许能抢下北大青鸟不少份额。去做职业培训的讲师，或许这也是技术人员的一条不错的创业之路。</p>
+<p>整个 MOOC 行业，2012 年全球出现了 60 多家公司。Learn Capital 合伙人 Rob Hutter 预测，<strong>全球教育市场的规模是 4.6 万亿美元，目前已有公司吃掉的差不多只有 500 亿美元，只是冰山一角，一切才刚刚开始。</strong></p>
+</li>
+</ol>
+<p>##<br>    最后</p>
+<pre><code>古人说「活到老、学到老」，MOOC 让学习变得更便捷、美好。在知乎上看到过一句话：
+</code></pre><blockquote>
+<p><strong>「在这个互联网时代，能限制住学习的只有你的求知欲。」</strong></p>
+</blockquote>
+<pre><code>作为前端，还想起一件事，jQuery 作者 John Resig 从 Mozilla 辞职后，投身去了教育领域。他在的地方，就是大名鼎鼎的可汗学院（Khan Academy）。
+</code></pre><p>##<br>    参考资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Massive_open_online_course" target="_blank" rel="external">http://en.wikipedia.org/wiki/Massive_open_online_course</a>&nbsp;– MOOC 的前世今生</li>
+<li><a href="http://www.36kr.com/search?q=Coursera" target="_blank" rel="external">http://www.36kr.com/search?q=Coursera</a>&nbsp;– Coursera 那点事</li>
+<li><p><a href="http://www.zhihu.com/topic/19793302/top-answers" target="_blank" rel="external">http://www.zhihu.com/topic/19793302/top-answers</a>&nbsp;– 这里能找到大量优秀课程推荐</p>
+<p>PS：这个春节才关注 MOOC，跟着 Philip Zelikow 教授学&nbsp;<a href="https://class.coursera.org/modernworld-002" target="_blank" rel="external">The Modern World: Global History since 1760</a>，跟进了两周感觉很不错。<strong>欢迎大家一起来挖掘优秀的 MOOC 课程资源，分享让世界更美丽动人。</strong></p>
+<p>（完）</p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>##<br>    概念介绍</p>
+<pre><code>MOOC（Massive Open Online Courses）是大规模在线开放课程，简单来说就是把各学校的课程放到互联网上，对所有人开放共享。
+
+MOOC 是一个理念，就如 Open Source 一样，与之对]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ajax 跨域]]></title>
+    <link href="http://www.soledad.com.cn/2014/07/17/ajax-e8-b7-a8-e5-9f-9f/"/>
+    <id>http://www.soledad.com.cn/2014/07/17/ajax-e8-b7-a8-e5-9f-9f/</id>
+    <published>2014-07-17T08:22:09.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>ajax的跨域通常需要</p>
+<pre><code>设置头部信息（需后端设置）
+
+res.header(&amp;quot<span class="comment">;Access-Control-Allow-Origin&amp;quot;, &amp;quot;*&amp;quot;); &amp;nbsp;</span>
+
+&lt;span style="line-height: 1.6em<span class="comment">;"&gt;res.header(&amp;quot;Access-Control-Allow-Headers&amp;quot;, &amp;quot;Origin, X-Requested-With, Content-Type, Accept&amp;quot;); &amp;nbsp;&lt;/span&gt;</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; res.header(&amp;quot;Access-Control-Allow-Methods&amp;quot;,&amp;quot;PUT,POST,GET,DELETE,OPTIONS&amp;quot;); &amp;nbsp;</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; res.header(&amp;quot;X-Powered-By&amp;quot;,&amp;#39; 3.2.1&amp;#39;) &amp;nbsp;</span>
+
+&amp;nbsp<span class="comment">;</span>
+
+关于response头部的设置具体可以参考以下网址
+
+http://www.w3.org/TR/access-control/#access-control-allow-origin-response-header
+
+https://dvcs.w3.org/hg/cors/raw-file/tip/Overview.html#access-control-allow-origin-response-header
+
+&amp;nbsp<span class="comment">;</span>
+
+当然也有ie和其他get 和post的设置，具体可以如下参考
+
+post 用ajax方式
+
+opt.type = type<span class="comment">;</span>
+
+opt.dataType = &amp;#39<span class="comment">;json&amp;#39;;</span>
+
+opt.crossDomain = true<span class="comment">;</span>
+
+opt.data = data<span class="comment">;</span>
+
+&amp;nbsp<span class="comment">;opt.contentType = &amp;#39;application/json; charset=utf-8&amp;#39;;</span>
+
+&amp;nbsp<span class="comment">;</span>
+
+get 用ajax方式
+
+opt.type = &amp;#39<span class="comment">;GET&amp;#39;;</span>
+
+opt.dataType = &amp;#39<span class="comment">;jsonp&amp;#39;;</span>
+
+opt.crossDomain = true<span class="comment">;</span>
+
+&amp;nbsp<span class="comment">;</span>
+
+ie8中用ajax方式 具体可参考http://msdn.microsoft.com/zh-cn/library/cc288060(VS.85).aspx
+
+var xdr = new XDomainRequest()<span class="comment">;</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (xdr) {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (opt.error &amp;amp;&amp;amp; typeof opt.error == &amp;quot;function&amp;quot;) {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xdr.onerror = function () {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; opt.error(); ;</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; };</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //handle timeout callback function</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (opt.timeout &amp;amp;&amp;amp; typeof opt.timeout == &amp;quot;function&amp;quot;) {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xdr.ontimeout = function () {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; opt.timeout();</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; };</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //handle success callback function</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (opt.success &amp;amp;&amp;amp; typeof opt.success == &amp;quot;function&amp;quot;) {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xdr.onload = function () {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (opt.dataType) {//handle json formart data</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (opt.dataType.toLowerCase() == &amp;quot;json&amp;quot;) {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; opt.callback(JSON.parse(xdr.responseText));</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; opt.callback(xdr.responseText);</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; };</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //wrap param to send</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; var data = &amp;quot;&amp;quot;;</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (opt.type == &amp;quot;POST&amp;quot;) {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; data = opt.data;</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; data = $.param(opt.data);</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xdr.open(opt.type, opt.url);</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xdr.send(data);</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>ajax的跨域通常需要</p>
+<pre><code>设置头部信息（需后端设置）
+
+res.header(&amp;quot<span class="comment">;Access-Control-Allow-Origin&amp;quot;, &amp;quot;*&a]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[webstorm使用指南]]></title>
+    <link href="http://www.soledad.com.cn/2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/"/>
+    <id>http://www.soledad.com.cn/2014/07/02/webstorm-e4-bd-bf-e7-94-a8-e6-8c-87-e5-8d-97/</id>
+    <published>2014-07-02T10:05:00.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>webstorm 非常好用&nbsp;</p>
+<pre><code>1.快速查找文件
+
+&amp;nbsp<span class="comment">; 双shift 查找文件</span>
+
+&amp;nbsp<span class="comment">; shift+ctrl+N 查找项目中的文件</span>
+
+&amp;nbsp<span class="comment">; 将文件添加入Faveratie方便查找</span>
+
+&lt;span style="font-size: 13px<span class="comment">;"&gt;&amp;nbsp; &amp;nbsp;ctrl+left+right看不同tab文件&lt;/span&gt;</span>
+
+2.使用快捷方式（通过用快速命令行的方式进行）
+
+&amp;nbsp<span class="comment">; &amp;nbsp;按住alt+ctrl+s进入设置搜external tools</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp;创建一个新的，然后可以用命令行工具和文件夹的位置进行命令的执行</span>
+
+&amp;nbsp<span class="comment">; &amp;nbsp;一旦形成终身受用</span>
+
+3.快速查看
+
+&amp;nbsp<span class="comment">;1.shift+esc 将边栏最小化</span>
+
+&amp;nbsp<span class="comment">;2.ctrl+ +/- 将块展开或缩小</span>
+
+&lt;span style="line-height: 1.6em<span class="comment">;"&gt;&amp;nbsp; 添加注释//TODO 然后利用alt+6查找&lt;/span&gt;</span>
+</code></pre><div><br><br>        &nbsp; 按住ctrl+b查找变量<br><br>        &nbsp; ctrl+点击找到引用源位置<br><br></div>
+
+<pre><code><span class="number">4.</span>快速操作
+
+&amp;nbsp; ctrl+d 复制行
+
+&amp;nbsp; ctrl+/ ctrl+shift+/快注释
+
+<span class="number">4.</span>比较 比较历史...两文件比较
+
+很好的快捷键，任需学习
+</code></pre><table border="0" cellpadding="0" cellspacing="0" style="border-width: 1px 1px 1px 0px; border-style: solid; border-color: rgb(217, 217, 217); font-family: 微软雅黑; font-size: 14px; margin: 0px -0.083em 2.083em 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word; border-spacing: 0px; width: 849px; color: rgb(116, 116, 116); line-height: 26.600000381469727px;" width="100%"><br>    <tbody style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+/&nbsp;或&nbsp;Ctrl+Shift+/<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                注释（//&nbsp;或者/<em>&hellip;</em>/&nbsp;）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Shift+F6<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                重构-重命名<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+X<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                删除行<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+D<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                复制行<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+G<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找行<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+Shift+Up/Down<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                代码向上/下移动。<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                F2&nbsp;或Shift+F2<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                高亮错误或警告快速定位<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                写代码，按Tab<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                生成代码<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                选中文本，按Ctrl+Shift+F7<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                高亮显示所有该文本，按Esc高亮消失。(因为这个功能我就可以发放心的放弃sublime了)<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+B或Ctrl+鼠标左键单击<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                快速打开光标处的类或方法，（NB的功能）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Alt + B<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Go to implementation(s) 跳转方法实现处<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Shift + I<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Open quick definition lookup 打开定义快速查找<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Alt + Up/Down<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Go to previous/next method 跳转到上一个/下一个方法<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+E<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                最近打开的文件<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Alt+F1<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找代码所在位置<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+Alt+L<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                格式化代码<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+R<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                替换文本<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+F<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找文本<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl+P<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                方法参数提示<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                F3<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找下一个<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Shift+F3<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                查找上一个<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                alt+Shift+F<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                将当前文件加入收藏夹<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                ctrl+alt+s<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                打开配置窗口<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                ctrl+Shift+N<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                通过文件名快速查找工程内的文件（必记）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                ctrl+Shift+alt+N<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                通过一个字符快速查找位置（必记）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Shift+enter<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                重新开始一行（无论光标在哪个位置）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl&nbsp;+&nbsp;Alt&nbsp;+&nbsp;T&nbsp;<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                with&hellip;（if, else, try, catch, for, etc）用 <em> 来围绕选中的代码行，（ </em> 包括 if 、 while 、 try catch 等）<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Shift + U<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Toggle case for word at caret or selected block 光标所在位置大小写<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Delete<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Delete to word end 删除文字结束<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Backspace<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Delete to word start 删除文字开始<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + E<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Recent files popup 弹出最近打开的文件<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                F11<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Toggle bookmark 切换标记，我觉得叫书签更好，就是sublime text 的F2<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Ctrl + Shift + F12<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Toggle maximizing editor 切换最大化编辑器<br>            </td><br>        </tr><br>        <tr style="border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word;"><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Alt + Shift + F<br>            </td><br>            <td style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); font-style: inherit; margin: 0px; outline: 0px; padding: 0.5em 1.25em; vertical-align: baseline; word-wrap: break-word;"><br>                Add to Favorites 添至收藏夹<br>            </td><br>        </tr><br>    </tbody><br></table>]]></content>
+    <summary type="html">
+    <![CDATA[<p>webstorm 非常好用&nbsp;</p>
+<pre><code>1.快速查找文件
+
+&amp;nbsp<span class="comment">; 双shift 查找文件</span>
+
+&amp;nbsp<span class="comment">; shift+]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[position的贯穿事件]]></title>
+    <link href="http://www.soledad.com.cn/2014/05/20/position-e7-9a-84-e8-b4-af-e7-a9-bf-e4-ba-8b-e4-bb-b6/"/>
+    <id>http://www.soledad.com.cn/2014/05/20/position-e7-9a-84-e8-b4-af-e7-a9-bf-e4-ba-8b-e4-bb-b6/</id>
+    <published>2014-05-20T08:49:20.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>当多个浮动元素叠加在一起的时候那么元素无法点击</p>
+<pre><code>可以用如下<span class="tag">css</span>解决这个问题，可以使点击贯穿
+
+<span class="rule"><span class="attribute">pointer-events</span>:<span class="value">none</span></span>;
+
+当然在手机上用的时候有<span class="tag">touchend</span>事件会和<span class="tag">click</span>产生重叠产生鬼点击，学习后再补充
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>当多个浮动元素叠加在一起的时候那么元素无法点击</p>
+<pre><code>可以用如下<span class="tag">css</span>解决这个问题，可以使点击贯穿
+
+<span class="rule"><span class="attribute">pointe]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[css3动画]]></title>
+    <link href="http://www.soledad.com.cn/2014/05/20/css3-e5-8a-a8-e7-94-bb/"/>
+    <id>http://www.soledad.com.cn/2014/05/20/css3-e5-8a-a8-e7-94-bb/</id>
+    <published>2014-05-20T08:46:18.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>####<br>    <strong>1.css3的动画分为属性的动画</strong></p>
+<pre><code>&amp;nbsp; transition动画
+
+第一个值为需要变化的 style可以使color background-color等，如果希望所有都有变化则可以 用<span class="built_in">all</span>
+
+第二个值 是变换的时间 比如<span class="number">0.</span>s
+
+第三个值 变化效果，比如匀速linear 减速ease 加速ease-<span class="type">in</span> 缓动加速ease-<span class="type">out</span> 先加速再减速ease-<span class="type">in</span>-<span class="type">out</span>
+
+第四个值 是延迟时间
+
+这个属性还有一个结束的回调事件
+
+webkitTransitionEnd
+
+如果是静态属性则只要在元素里写即可
+
+如果dom元素还包含效果动画，则在hover中也要添加transition
+</code></pre><p>####<br>    <strong>2.效果动画</strong></p>
+<pre><code>主要是<span class="tag">transform</span>属性
+
+角度
+
+&amp;<span class="tag">nbsp</span>;&amp;<span class="tag">nbsp</span>;&amp;<span class="tag">nbsp</span>; <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">rotate</span>()：旋转
+
+&amp;nbsp</span></span>;&amp;<span class="tag">nbsp</span>;&amp;<span class="tag">nbsp</span>; <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">skew</span>()：&amp;nbsp</span></span>; 倾斜
+
+比例
+
+&amp;<span class="tag">nbsp</span>;&amp;<span class="tag">nbsp</span>;&amp;<span class="tag">nbsp</span>; <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">scale</span>()：大小
+
+坐标
+
+&amp;nbsp</span></span>;&amp;<span class="tag">nbsp</span>;&amp;<span class="tag">nbsp</span>; <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">translate</span>()：x,y</span></span>
+</code></pre><p>####<br>    <strong>3.帧动画（不了解）</strong></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>####<br>    <strong>1.css3的动画分为属性的动画</strong></p>
+<pre><code>&amp;nbsp; transition动画
+
+第一个值为需要变化的 style可以使color background-color等，如果希望所有都有]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[overflow与清除]]></title>
+    <link href="http://www.soledad.com.cn/2014/05/20/overflow-e4-b8-8e-e6-b8-85-e9-99-a4/"/>
+    <id>http://www.soledad.com.cn/2014/05/20/overflow-e4-b8-8e-e6-b8-85-e9-99-a4/</id>
+    <published>2014-05-20T07:03:46.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>一般的布局是由块级元素div来布局的</p>
+<pre><code>默认是宽度会充满，高度为元素内容高度的效果
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>元素的浮动</strong></span></p>
+<pre><code>当元素设置为<span class="attribute">float</span>：<span class="attribute">left</span>；或者<span class="attribute">float</span>：<span class="attribute">right</span>；后元素相对于document浮动起来。
+
+所以不在一个层里，这个个人感觉没什么意义，但是为了处理这个问题，有三种方法
+
+<span class="tag">a</span>.将父级元素也设置为<span class="attribute">float</span>：<span class="attribute">left</span>（显然比较二）
+
+<span class="tag">b</span>.在元素后加clearfix标签
+
+&amp;nbsp;&amp;nbsp; 最简单的clearfix就是<span class="attribute">clear</span>：<span class="value">both</span>将元素的浮动清空。
+
+&amp;nbsp;&amp;nbsp; 好一点的情况
+
+<span class="class">.clearfloat</span><span class="pseudo">:after</span>{<span class="attribute">display</span><span class="value">:block;</span><span class="attribute">clear</span><span class="value">:both;</span><span class="attribute">content</span><span class="value">:&amp;quot;</span>&amp;quot;;<span class="attribute">visibility</span><span class="value">:hidden;</span><span class="attribute">height</span><span class="value">:<span class="number">0</span>}
+
+.clearfloat{zoom:<span class="number">1</span>}
+
+c.通过overflow：hidden来解决
+
+&amp;nbsp;</span> 因为<span class="attribute">overflow</span>的意思是如果元素超出边界才处理，所以他会预置这种方式，意味先将其撑起
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>一般的布局是由块级元素div来布局的</p>
+<pre><code>默认是宽度会充满，高度为元素内容高度的效果
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>元素的浮动</strong><]]>
+    </summary>
+    
+      <category term="css" scheme="http://www.soledad.com.cn/categories/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[box-sizing 与 栅格]]></title>
+    <link href="http://www.soledad.com.cn/2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/"/>
+    <id>http://www.soledad.com.cn/2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/</id>
+    <published>2014-05-20T04:05:50.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>最近在做小组的项目工具，个人负责css与html的架构</p>
+<pre><code>刚开始做的时候因为项目比较符合有规律的布局，遂决定用栅格化布局
+
+栅格化布局之前有了解但理解的不深入。
+
+主要的栅格化定义了单个模块的宽度和每两个模块间的留白，其实现类似于表格布局，比较规范
+
+之前看到youku就是这样布局的而且这种布局比较方便弹性，<span class="keyword">bootstrap</span>和大多数的外国网站也有用到了这种布局
+</code></pre><p>####<br>    <strong><span style="font-size:14px;">屏幕分辨率规划</span></strong></p>
+<pre><code>一般的栅栏布局有对各种的屏幕响应性的布局设计，详见：http:<span class="comment">//v2.bootcss.com/scaffolding.html</span>
+
+需要了解各种屏幕浏览器分辨率,详见：http:<span class="comment">//screensiz.es/phone（点击右上角可以看到各种属性）</span>
+
+栅栏的原理是定义一个container的宽度，在有限的宽度内设置每个元素的margin和width来对各个属性配合
+
+比如：<span class="number">960</span>px的宽度，那么我们分配<span class="number">20</span>栅栏<span class="number">960</span>/<span class="number">20</span> = <span class="number">48</span>px;如果定义间隔为<span class="number">10</span>px那么实际的宽度就是<span class="number">38</span>px;
+
+我们可以在最外层设置margin:值为负值来使两端对齐(如果使用这个边距可以减一个margin来配置)，中间的元素我们通过margin-left和margin-right来进行配置。
+
+比如grid1{width:<span class="number">38</span>px;margin-left:<span class="number">5</span>px;margin-right:<span class="number">5</span>px;}
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>box-sizing属性的用法</strong></span></p>
+<pre><code>当然如果用栅栏布局的话，我们通过覆盖定义比如上例的grid1我们在后面覆盖了这个定义
+
+grid1{padding:<span class="number">10</span>px;&lt;span style=<span class="string">"line-height: 1.6em;"</span>&gt;}的话，那么一行并不能充满<span class="number">20</span>个栅格元素，&lt;/span&gt;
+
+&lt;span style=<span class="string">"line-height: 1.6em;"</span>&gt;这是因为问w3c的盒子模型定义的是内盒子宽度是<span class="variable">width</span>+padding+border控制的&lt;/span&gt;
+
+但是IE6及其之前的版本的盒子模型是通过<span class="variable">width</span>
+
+所以我们希望通过<span class="variable">width</span>控制宽度，然后padding进行内部拓展。可以通过给父级元素加栅格实现。
+
+而现在又一个<span class="built_in">box</span>-sizing的属性为我们带来了福音。
+
+<span class="built_in">box</span>-sizing:有border-<span class="built_in">box</span>和context-<span class="built_in">box</span>两个值
+
+如果是border-<span class="built_in">box</span>则以IE6为主的布局。content-<span class="built_in">box</span>为W3C推荐的值。
+
+所以在栅格布局的时候我们最好将值设置为border-<span class="built_in">box</span>这样值就是内部控制了。
+
+<span class="built_in">box</span>-sizing还能有效的对表单元素进行控制，因为表单元素对浏览器来说他们的盒子模型是不固定的。
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>Less辅助栅格布局</strong></span></p>
+<pre><code>我们可以通过<span class="operator">Less</span>或者sass对栅格进行弹性设计，这样不仅精确而且对于弹性的调整非常方便
+
+<span class="operator">Less</span>的特别之处在于变量计算和嵌套，对于设备的方式也非常容易，如果用grunt对<span class="operator">less</span>进行编译将能够非常有效的进行。下面是我用<span class="operator">less</span>对栅格化的布局
+
+&amp;nbsp;
+</code></pre><pre>
+/*grid under1200px*/ @gcell:45; @ggap:20; .grid1{width:(@gcell*1px-@ggap);} .grid2{width:(@gcell*2px-@ggap);} .grid3{width:(@gcell*3px-@ggap);} .grid4{width:(@gcell*4px-@ggap);} .grid5{width:(@gcell*5px-@ggap);} .grid6{width:(@gcell*6px-@ggap);} .grid7{width:(@gcell*7px-@ggap);} .grid8{width:(@gcell*8px-@ggap);} .grid9{width:(@gcell*9px-@ggap);} .grid10{width:(@gcell*10px-@ggap);} .grid11{width:(@gcell*11px-@ggap);} .grid12{width:(@gcell*12px-@ggap);} .grid13{width:(@gcell*13px-@ggap);} .grid14{width:(@gcell*14px-@ggap);} .grid15{width:(@gcell*15px-@ggap);} .grid16{width:(@gcell*16px-@ggap);} .grid17{width:(@gcell*17px-@ggap);} .grid18{width:(@gcell*18px-@ggap);} .grid19{width:(@gcell*19px-@ggap);} .grid20{width:(@gcell*20px-@ggap);} /*grid under1200px*/ @media(min-width:1200px){ @gcell:60; @ggap:30; .grid1{width:(@gcell*1px-@ggap);} .grid2{width:(@gcell*2px-@ggap);} .grid3{width:(@gcell*3px-@ggap);} .grid4{width:(@gcell*4px-@ggap);} .grid5{width:(@gcell*5px-@ggap);} .grid6{width:(@gcell*6px-@ggap);} .grid7{width:(@gcell*7px-@ggap);} .grid8{width:(@gcell*8px-@ggap);} .grid9{width:(@gcell*9px-@ggap);} .grid10{width:(@gcell*10px-@ggap);} .grid11{width:(@gcell*11px-@ggap);} .grid12{width:(@gcell*12px-@ggap);} .grid13{width:(@gcell*13px-@ggap);} .grid14{width:(@gcell*14px-@ggap);} .grid15{width:(@gcell*15px-@ggap);} .grid16{width:(@gcell*16px-@ggap);} .grid17{width:(@gcell*17px-@ggap);} .grid18{width:(@gcell*18px-@ggap);} .grid19{width:(@gcell*19px-@ggap);} .grid20{width:(@gcell*20px-@ggap);} } </pre>
+
+<pre><code>其中需要注意的是<span class="operator">less</span>变量的加减比如
+</code></pre><pre style="font-size: 13px;">
+@gcell*12px-@ggap</pre>
+
+<pre><code>就可以正常显示
+
+如果
+</code></pre><pre style="font-size: 13px;">
+(@gcell*12-@ggap)px</pre>
+
+<pre><code>会在px前加一个空格，无法正常显示。
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近在做小组的项目工具，个人负责css与html的架构</p>
+<pre><code>刚开始做的时候因为项目比较符合有规律的布局，遂决定用栅格化布局
+
+栅格化布局之前有了解但理解的不深入。
+
+主要的栅格化定义了单个模块的宽度和每两个模块间的留白，其实现类似于表格布局，比较规]]>
+    </summary>
+    
+      <category term="css" scheme="http://www.soledad.com.cn/categories/css/"/>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/css/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[js继承]]></title>
+    <link href="http://www.soledad.com.cn/2014/05/06/js-e7-bb-a7-e6-89-bf/"/>
+    <id>http://www.soledad.com.cn/2014/05/06/js-e7-bb-a7-e6-89-bf/</id>
+    <published>2014-05-06T01:06:05.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>js的继承大体分为类式继承 掺元类继承 原型链继承</p>
+<pre><code>因为每个函数的prototype对象就是一个object。所以prototype就要接受object对象
+
+object对象一般有<span class="tag">a</span>.其他函数的prototype对象（由于会造成反射所以一般不用）<span class="tag">b</span><span class="class">.new</span> <span class="function"><span class="title">Class</span><span class="params">()</span></span>实例c.object对象字面量
+</code></pre><p>###<br>    <span style="font-size:12px;"><strong>原型继承</strong></span></p>
+<pre><code>如果用原型继承那么就相当于，对象字面量的父级直接继承在了函数上。为了令继承的原型唯一继承在至上。
+
+可以用类似<span class="keyword">clone</span>的方法
+
+<span class="function"><span class="keyword">function</span> <span class="title">clone</span><span class="params">(obj)</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;<span class="keyword">var</span> F = <span class="keyword">new</span> F(){};
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;F.prototype = obj;
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;<span class="keyword">return</span> <span class="keyword">new</span> F();
+
+}
+</code></pre><p>####<br>    <strong><span style="font-size:12px;">仿类式继承</span></strong></p>
+<pre><code>仿类式继承比较麻烦。其原理是将类的嫁接在另一个类的原型上，可以直接用prototype = <span class="keyword">new</span> Class();的方式。
+
+<span class="keyword">var</span> extend = <span class="function"><span class="keyword">function</span><span class="params">(classA)</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;<span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{};
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;func.prototype = <span class="keyword">new</span> classA();
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;<span class="keyword">return</span> func;
+
+}
+
+仿类式继承需要对construct进行判定重新绑定superClass和subClass的prototype的construct于自身
+
+如果需要construct中的内容也要执行父级框中的，需要在构造函数中声明。
+</code></pre><p>####<br>    <span style="font-size:12px;"><strong>掺元类继承</strong></span></p>
+<pre><code>将一个原型中的方法，复制于另一个中
+
+var augument = function(<span class="sub"><span class="keyword">sub</span>,sup){</span>
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;<span class="keyword">for</span>(var key in sup){
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;<span class="keyword">if</span>(!sup.hasOwnProperty(key)){
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;sup.<span class="keyword">prototype</span>[key] = sup[key];
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;}
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}
+
+}
+
+以上继承都是不同的方式在<span class="keyword">prototype</span>上的继承。而且只有掺元类不会反射。其他的方式均会反射。需要引起注意。
+
+如果是obj的继承则更简单。
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>js的继承大体分为类式继承 掺元类继承 原型链继承</p>
+<pre><code>因为每个函数的prototype对象就是一个object。所以prototype就要接受object对象
+
+object对象一般有<span class="tag">a</span>.其他函数]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[继承之mutable]]></title>
+    <link href="http://www.soledad.com.cn/2014/05/05/e7-bb-a7-e6-89-bf-e4-b9-8bmutable/"/>
+    <id>http://www.soledad.com.cn/2014/05/05/e7-bb-a7-e6-89-bf-e4-b9-8bmutable/</id>
+    <published>2014-05-05T11:24:10.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>今天看到我们H5的最底层的继承用了inherit.js的东西</p>
+<pre><code><span class="keyword">js</span>有一种异变性很是继承的关键
+
+<span class="keyword">js</span>的继承有原型继承和仿类式继承
+
+最简单的literal对象的继承用jquery的extend属性就可以ok<span class="comment">;</span>
+
+如果是纯<span class="keyword">js</span>的原型链上的继承只要复制一份就好了。
+
+不过其他的继承由于原型链很容易造成易变的效果。比如下方
+</code></pre><p>####<br>    <span style="font-size:12px;"><strong>易变特性</strong></span></p>
+<pre><code>a.最简单的易变
+
+<span class="keyword">var</span> CeshiA = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiA.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;aa&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> CeshiB = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;bb&amp;#39;);</span>
+
+}
+
+CeshiA.prototype= CeshiB.prototype;
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;cc&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> Cb = <span class="keyword">new</span> CeshiA();
+
+Cb.ceshi();
+
+b.生成实例的易变
+
+<span class="keyword">var</span> CeshiA = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiA.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;aa&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> CeshiB = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;bb&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> CeshiC = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+}
+
+CeshiC.prototype = CeshiB.prototype;
+
+CeshiA.prototype = CeshiC;
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;cc&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> Cb = <span class="keyword">new</span> CeshiA();
+
+Cb.ceshi();
+
+c.稍微复杂的易变
+
+<span class="keyword">var</span> CeshiA = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiA.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;aa&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> CeshiB = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;bb&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> CeshiC = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+}
+
+CeshiC.prototype = CeshiB.prototype;
+
+CeshiA.prototype= <span class="keyword">new</span> CeshiC();
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;cc&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> Cb = <span class="keyword">new</span> CeshiA();
+
+Cb.ceshi();
+</code></pre><p>####<br>    <span style="font-size:12px;"><strong>去除易变特性</strong></span></p>
+<pre><code>或者直接继承的是链接上的函数
+
+<span class="keyword">var</span> CeshiA = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiA.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(&amp;<span class="preprocessor">#39;aa&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> CeshiB = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+
+};
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; console.log(&amp;<span class="preprocessor">#39;bb&amp;#39;);</span>
+
+}
+
+CeshiA.prototype.ceshi = CeshiB.prototype.ceshi;
+
+CeshiB.prototype.ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;console.log(&amp;<span class="preprocessor">#39;hehe&amp;#39;);</span>
+
+}
+
+<span class="keyword">var</span> Cb = <span class="keyword">new</span> CeshiA();
+
+Cb.ceshi();
+
+易变的根源在于，对象object的易变，又有对象prototype其实是一种object
+
+所以会造成易变，如果用闭包对其建立副本或者用单体模式便可以阻止易变，但是却会破坏继承
+
+比如<span class="keyword">var</span> ceshi = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; <span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; }
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; <span class="keyword">return</span> {a:a};
+
+})()
+
+这样函数永远不会被覆盖
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天看到我们H5的最底层的继承用了inherit.js的东西</p>
+<pre><code><span class="keyword">js</span>有一种异变性很是继承的关键
+
+<span class="keyword">js</span>的继承有原型继承和仿类式继承]]>
+    </summary>
+    
+      <category term="js" scheme="http://www.soledad.com.cn/categories/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[grunt探究[不断更新中]]]></title>
+    <link href="http://www.soledad.com.cn/2014/04/24/grunt-e6-8e-a2-e7-a9-b6-e4-b8-8d-e6-96-ad-e6-9b-b4-e6-96-b0-e4-b8-ad/"/>
+    <id>http://www.soledad.com.cn/2014/04/24/grunt-e6-8e-a2-e7-a9-b6-e4-b8-8d-e6-96-ad-e6-9b-b4-e6-96-b0-e4-b8-ad/</id>
+    <published>2014-04-24T07:38:14.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>对于grunt真的是无比伤神，话说会者不难，难者不会。</p>
+<pre><code>弄了半天，每次都有所了解。学了大半年，不断了解。将grunt文档都看完才了解。
+
+grunt是自动化工具有很多插件。但是里面有很多坑和难点。
+
+小白如我者。经常如果路径填错了，则完全没有作用。
+
+**&lt;span style=<span class="string">"font-size:14px;"</span>&gt;<span class="number">1.</span>路径匹配规则&lt;/span&gt;**
+
+路径不是想象中的和cmd中的路径一样。有很多不同。
+
+里面的路径我分为两种
+
+<span class="operator">a</span>.任务中的路径
+
+b.读取配置的路径
+
+<span class="operator">a</span>::grunt将Gruntfile.js专门提出来进行自动化。那么我们可以将不同分支的配置文件放入不同的分支中需要的时候进行读取就好了。只要格式一致就可以。
+
+所以读取配置中的路径很容易。最常用的就如例子中一样pkg:grunt.<span class="built_in">file</span>.readJSON(&amp;<span class="comment">#39;package.json&amp;#39;);</span>
+
+以前以为这个是必须的，其实根本没必要添加。只是为了配置分离而已。尼玛。
+
+所以如果想读上面分支的文件就可以grunt.<span class="built_in">file</span>.readJSON(&amp;<span class="comment">#39;../branchA/gruntConf.json&amp;#39;);</span>
+
+b::任务中路径则不同。任务中的路径是用了blob规则详见<span class="keyword">https</span>://github.com/isaacs/node-glob
+
+而文件的任务有以下几种规则
+
+&amp;nbsp;&amp;nbsp; 一、简易式+数组式
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; src：&amp;<span class="comment">#39;a.js&amp;#39;</span>
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; dest:&amp;<span class="comment">#39;dest/&amp;#39;</span>
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; 或
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; src:[<span class="string">'a.js'</span>]
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; dest:[<span class="string">'dest/'</span>]
+
+&amp;nbsp; 二、动态式
+
+&amp;nbsp;&amp;nbsp; expand：<span class="constant">true</span>
+
+&amp;nbsp;&amp;nbsp; 当expand为<span class="constant">true</span>时可以
+
+&amp;nbsp;&amp;nbsp; `cwd`&amp;nbsp; `src`&amp;nbsp; `dest` 。。。几种常用的其他的自行查文档。
+
+&amp;nbsp;三、文件数组式
+
+&amp;nbsp; <span class="operator">a</span>.<span class="built_in">files</span>:[
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;<span class="comment">#39;dest&amp;#39;:['srca.js','srcb.js']</span>
+
+&amp;nbsp;&amp;nbsp; ]
+
+&amp;nbsp; b.<span class="built_in">files</span>:[一，二中的静态或动态对象]
+
+而任务中的路径则是通过基于base和网站根目录很像的base默认是Gruntfile.js所在目录。
+
+所以如果将Gruntfile放在跟目录的一个文件夹里，则不能够对src设置为&amp;<span class="comment">#39;../&amp;#39;</span>
+
+以上所有的路径可以参考blob通配符<span class="keyword">http</span>://gruntjs.cn/configuring-tasks/<span class="comment">#building-the-files-object-dynamically</span>
+
+所以要重新设置Gruntfile中的路径则需要grunt.<span class="built_in">file</span>.setBase(&amp;<span class="comment">#39;../&amp;#39;)</span>
+
+真的是相当伤神。<span class="built_in">file</span>.setBase是设置任务中的base，当然也可以通过-cli中的-b来修改。当base的路径修改的时候就连同<span class="built_in">file</span>和执行目录的base都改了，如果Gruntfile需要和分支分离，那么还真是不方便呢，有点小坑
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>对于grunt真的是无比伤神，话说会者不难，难者不会。</p>
+<pre><code>弄了半天，每次都有所了解。学了大半年，不断了解。将grunt文档都看完才了解。
+
+grunt是自动化工具有很多插件。但是里面有很多坑和难点。
+
+小白如我者。经常如果路径填错了，则完全没有作]]>
+    </summary>
+    
+      <category term="js" scheme="http://www.soledad.com.cn/categories/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[UTF-8 BOM问题]]></title>
+    <link href="http://www.soledad.com.cn/2014/04/24/utf-8-bom-e9-97-ae-e9-a2-98/"/>
+    <id>http://www.soledad.com.cn/2014/04/24/utf-8-bom-e9-97-ae-e9-a2-98/</id>
+    <published>2014-04-24T02:35:27.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>BOM造成很多问题，却不知为何。如何该用如果不该用</p>
+<pre><code>前些天出了点小问题关于字符编码的，不过莫名其妙的好了，现在还不知道为何。
+
+我们的页面是gb2312或者gbk的要看区域。但是js统一使用utf8进行编码
+
+utf8有Bom和无Bom之分
+
+其实他们的区别就是没有区别。Bom是<span class="xml"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">dir</span>=<span class="value">"auto"</span>&gt;</span></span>字节顺序标记，<span class="xml"><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span>[<span class="link_label">UTF-8</span>](<span class="link_url">http://zh.wikipedia.org/wiki/UTF-8 "UTF-8"</span>)则没有字节顺序的议题，但是用记事本或者很多工具生成的时候
+
+却会出现这个，它只用来标示一个UTF-8的文件，许多[<span class="link_label">视窗</span>](<span class="link_url">http://zh.wikipedia.org/wiki/%E8%A6%96%E7%AA%97%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1 "视窗操作系统"</span>)程序（包含[<span class="link_label">记事本</span>](<span class="link_url">http://zh.wikipedia.org/wiki/%E8%A8%98%E4%BA%8B%E6%9C%AC "记事本"</span>)）会添加字节顺序标记到UTF-8文件。
+
+然而在Unix系统中却不这样使用。
+
+但是在php文件中，如果没有激活输出缓冲（output buffering），它会使得页面内容开始被送往浏览器（即：用户头文件已被提交）
+
+在线上环境中utf8版本的文件头部也会多加一个乱码，如果在页面中则很容易出现头部出现一个空格。
+
+所以副作用太大了，有木有。
+
+所以珍爱生命，远离BOM格式了吧。尤其是服务器脚本程序和页面html中。但是作为js这种弱脚本文件，没有太大影响，还是尽量设置为非BOM吧
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>BOM造成很多问题，却不知为何。如何该用如果不该用</p>
+<pre><code>前些天出了点小问题关于字符编码的，不过莫名其妙的好了，现在还不知道为何。
+
+我们的页面是gb2312或者gbk的要看区域。但是js统一使用utf8进行编码
+
+utf8有Bom和无Bom之分
+
+]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[arguments的应用]]></title>
+    <link href="http://www.soledad.com.cn/2014/04/23/arguments-e7-9a-84-e5-ba-94-e7-94-a8/"/>
+    <id>http://www.soledad.com.cn/2014/04/23/arguments-e7-9a-84-e5-ba-94-e7-94-a8/</id>
+    <published>2014-04-23T01:55:47.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>arguments这种伪数组</p>
+<pre><code>可通过<span class="tag">Array</span><span class="class">.prototype</span><span class="class">.slice</span><span class="class">.call</span>(<span class="tag">arguments</span>);
+
+来转换为数组。
+
+<span class="tag">arguments</span>有一个<span class="tag">calle</span>函数指向自身，多用于递归的运算
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>arguments这种伪数组</p>
+<pre><code>可通过<span class="tag">Array</span><span class="class">.prototype</span><span class="class">.slice</span><spa]]>
+    </summary>
+    
+      <category term="js" scheme="http://www.soledad.com.cn/categories/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[js类型判断]]></title>
+    <link href="http://www.soledad.com.cn/2014/04/23/js-e7-b1-bb-e5-9e-8b-e5-88-a4-e6-96-ad/"/>
+    <id>http://www.soledad.com.cn/2014/04/23/js-e7-b1-bb-e5-9e-8b-e5-88-a4-e6-96-ad/</id>
+    <published>2014-04-23T01:53:16.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>js的类型判断比较复杂。</p>
+<pre><code>不光因为js的类型是弱类型所以很容易导致mutable的效果
+
+一般的等式也得===以避免[<span class="number">3</span>,<span class="number">4</span>]==&amp;quot;<span class="number">3</span>,<span class="number">4</span>&amp;quot; <span class="literal">null</span>==<span class="literal">undefined</span>这样的问题
+
+对于一般的<span class="literal">null</span> <span class="literal">undefined</span>可以通过！value来进行判断。
+
+其他的值就没这么容易了。
+
+如果在框架中，捕获不到dom元素或者有内容不见了，很容易导致<span class="literal">undefined</span>错误
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>一般类型的判断</strong></span></p>
+<pre><code>那么一般的类型有哪些？
+
+有undefined boolean <span class="keyword">string</span> number function <span class="keyword">object</span> 六种
+
+注意<span class="keyword">null</span>也是一种<span class="keyword">object</span>
+
+基本的类型可以通过<span class="keyword">typeof</span> <span class="keyword">value</span>来判断如果是以上六种都是可以判断的。而且判断出的值为小写
+
+比如<span class="keyword">typeof</span> <span class="keyword">value</span> == &amp;quot;<span class="keyword">string</span>&amp;quot;
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>几种特别的Object类型</strong></span></p>
+<pre><code>其中<span class="built_in">object</span>类型又可分为几种特别的
+
+null Array（比较常见，可由.construct进行判定） Math RegExp <span class="built_in">Date</span> 几种
+
+可以由.toString方式来判定。但是一般的toString并不能显示
+
+需由<span class="built_in">Object</span>.prototype.toString.<span class="keyword">call</span>(obj)来进行判断
+
+出来的结果为[<span class="built_in">object</span> Type]
+
+比如<span class="built_in">Object</span>.prototype.toString.<span class="keyword">call</span>(<span class="keyword">new</span> <span class="built_in">Date</span>()) === [<span class="built_in">object</span> <span class="built_in">Date</span>]来判定
+</code></pre><p>####<br>    <strong>对null的特别判断</strong></p>
+<pre><code><span class="keyword">null</span>没有特别的方式可由 <span class="keyword">value</span>===<span class="keyword">null</span>来判断
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>对数字的特别判断</strong></span></p>
+<pre><code>数字也会有<span class="literal">NaN</span>这个特别的值。
+
+可由<span class="built_in">parseInt</span>()对字符进行转换的时候常会出现。(<span class="built_in">parseFloat</span>的运算可导致精度问题)
+
+可由<span class="built_in">isNaN</span>来判断
+
+当然如果要判定为数字可由<span class="keyword">typeof</span> value === <span class="built_in">number</span> &amp;amp;&amp;amp;　<span class="built_in">isFinite</span>(value);来判断
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>对非系统Object的判断</strong></span></p>
+<pre><code>对于非系统的object
+
+比如<span class="keyword">var</span> ceshi&amp;nbsp; = <span class="keyword">new</span> Ceshi();
+
+这样如果ceshi之后又被覆盖为ceshi = Ceshi();
+
+而Ceshi = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; <span class="keyword">this</span>.color = &amp;quot;hehe&amp;quot;;
+
+}
+
+<span class="keyword">this</span>没有指向就会报错。
+
+所以可以用ceshi <span class="keyword">instanceof</span> Ceshi来判断。
+
+基本判断大致这些
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>对Object的继承的判断</strong></span></p>
+<pre><code>如果想判断非原型的<span class="keyword">Object</span>的继承
+
+可由hasOwnProperty和isProperty来判断
+
+其中<span class="keyword">Object</span>在<span class="function"><span class="keyword">Function</span>里有一个<span class="title">prototype</span>.<span class="title">construct</span>不要和<span class="title">prototype</span>中的值搞混了。
+
+&amp;<span class="title">nbsp</span>;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>js的类型判断比较复杂。</p>
+<pre><code>不光因为js的类型是弱类型所以很容易导致mutable的效果
+
+一般的等式也得===以避免[<span class="number">3</span>,<span class="number">4</span>]==&]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[jquery动画堆栈操作]]></title>
+    <link href="http://www.soledad.com.cn/2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/"/>
+    <id>http://www.soledad.com.cn/2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/</id>
+    <published>2014-04-17T06:16:04.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>转载请注明….来自soledad.com.cn</p>
+<p>####<br>    <strong>原理</strong></p>
+<pre><code>jquery的动画堆栈原理是将所有的动画函数压入一个数组中
+
+当运行的时候将队列中的函数取出并将这个函数从数组中删除
+
+这个数组在jquery中叫做&amp;quot;fx&amp;quot;
+
+可由<span class="built_in">queue</span>(&amp;quot;fx&amp;quot;)获得
+
+最原始的加入队列的函数即为<span class="built_in">queue</span>
+</code></pre><p>####<br>    <strong>队列</strong></p>
+<pre><code>$(&amp;<span class="preprocessor">#<span class="number">39</span>;div&amp;#<span class="number">39</span>;).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);})</span>
+
+如果需要两个以上的函数那么必须在此函数后执行要加入dequeue
+
+可以$(&amp;<span class="preprocessor">#<span class="number">39</span>;div&amp;#<span class="number">39</span>;).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;).dequeue();}).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);});</span>
+
+也可以$(&amp;<span class="preprocessor">#<span class="number">39</span>;div&amp;#<span class="number">39</span>;).queue(function(next){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);next()}).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);});</span>
+
+**延时和停止**
+
+如果需要延时则使用.delay()即可。
+
+.stop函数的第一个param意思为是否将后续动画从队列中移除，第二个参数意思是是否将动画执行到最后。
+
+将函数队列置空可以用.<span class="built_in">queue</span>(&amp;quot;fx&amp;quot;,[]);也可以用$.[clearQueue()](http:<span class="comment">//api.jquery.com/clearQueue/ "Permalink to .clearQueue()")</span>
+
+如果希望直接到动画的最终点可以用$.[clearQueue() + .stop(<span class="literal">true</span>,<span class="literal">true</span>);也可以用.finish](http:<span class="comment">//api.jquery.com/clearQueue/ "Permalink to .clearQueue()")</span>
+</code></pre><p>####<br>    <strong>集成动画</strong></p>
+<pre><code>现在的动画被简化为<span class="class">.animate</span>({},time)括号中的为<span class="tag">css</span>参数值+时间即可
+
+最经典的集成有三组
+
+<span class="class">.fadeIn</span>() <span class="class">.fadeOut</span>() <span class="class">.fadeToggle</span>();
+
+<span class="class">.show</span>()<span class="keyword">&amp;</span><span class="tag">nbsp</span>;<span class="keyword">&amp;</span><span class="tag">nbsp</span>; <span class="class">.hide</span>()<span class="keyword">&amp;</span><span class="tag">nbsp</span>;<span class="keyword">&amp;</span><span class="tag">nbsp</span>;<span class="keyword">&amp;</span><span class="tag">nbsp</span>; <span class="class">.toggle</span>();
+
+<span class="class">.slideUp</span>() <span class="class">.slideDown</span>() <span class="class">.slideToggle</span>();
+
+括号中参数可填执行时间或者填入<span class="attribute">callback</span>
+</code></pre><p>####<br>    <strong>后续执行</strong></p>
+<pre><code>可以同.promise<span class="literal">()</span>函数来进行
+
+.promise函数返回一个deffered对象
+
+这个会和ajax的效果一样
+
+可以通过.done<span class="literal">()</span> .<span class="keyword">then</span><span class="literal">()</span> .fail<span class="literal">()</span> .always<span class="literal">()</span> .resolve<span class="literal">()</span> .resolveWith<span class="literal">()</span> .reject<span class="literal">()</span> .rejectWith<span class="literal">()</span>来进行将返回的函数加在动画堆栈的相应部分
+
+更容易的方式是$.when(effect<span class="literal">()</span>).done(function<span class="literal">()</span>{})
+
+这样便可以很容易的操作在effect<span class="literal">()</span>函数执行完后进行
+</code></pre><p>####<br>    <strong>缓冲</strong></p>
+<pre><code>&amp;nbsp<span class="comment">;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>转载请注明….来自soledad.com.cn</p>
+<p>####<br>    <strong>原理</strong></p>
+<pre><code>jquery的动画堆栈原理是将所有的动画函数压入一个数组中
+
+当运行的时候将队列中的函数取出并将这个函数从数组中删除
+]]>
+    </summary>
+    
+      <category term="未分类" scheme="http://www.soledad.com.cn/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[事件的绑定与冒泡]]></title>
+    <link href="http://www.soledad.com.cn/2014/04/17/e4-ba-8b-e4-bb-b6-e7-9a-84-e7-bb-91-e5-ae-9a-e4-b8-8e-e5-86-92-e6-b3-a1/"/>
+    <id>http://www.soledad.com.cn/2014/04/17/e4-ba-8b-e4-bb-b6-e7-9a-84-e7-bb-91-e5-ae-9a-e4-b8-8e-e5-86-92-e6-b3-a1/</id>
+    <published>2014-04-17T03:08:41.000Z</published>
+    <updated>2015-10-09T12:33:51.000Z</updated>
+    <content type="html"><![CDATA[<p>一般浏览器都进行的是冒牌的程序</p>
+<pre><code>当几个元素在不同的父子级夹杂的时候需要添加<span class="keyword">return</span> <span class="keyword">false</span>来解除冒牌
+
+如果是正常绑定子父级关系的话完全没有问题
+
+但是如果是需要动态加载的话（貌似jquery的live已不能用）
+
+现在比较喜欢用jquery的<span class="keyword">delegate</span>来绑定子父级的事件
+
+这样如果在父级绑定一个事件
+
+再用动态的模式在子级绑定一个事件，可能子集用来动态挂靠的父级拥有比之前父级更高的优先级
+
+比如
+</code></pre><pre>
+&lt;div class=&quot;parent_top&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;parent&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;div class=&quot;child&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;heihei
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre><code>如果我在<span class="keyword">parent</span>绑定一下
+</code></pre><pre>
+$(&#39;.parent&#39;).click(function(){alert(&#39;I&#39;m a parent&#39;)});
+</pre>
+
+<pre><code>再在child上动态绑定一下
+</code></pre><pre>
+$(&#39;.parent_top&#39;).delegate(&#39;.child&#39;,&#39;click&#39;function(){alert(&#39;I&#39;m a child&#39;)});</pre>
+
+<pre><code>这种情况的话其实相当于捕获的过程,如果希望子集的事件不被父级影响这时候用<span class="keyword">return</span> <span class="literal">false</span>;就没什么效果了。
+
+那么我们就用捕获的方式截获一下
+</code></pre><pre>
+$(&#39;.parent&#39;).click(function(e){if($(e.target).hasClass(&#39;child&#39;)){return false;}alert(&#39;I&#39;m a parent&#39;)});
+</pre>
+
+<pre><code>这样便可以了，很神奇，<span class="keyword">return</span> fasle阻止了父级事件的冒牌。却使挂靠在父级的动态子集正常触发事件。
+
+当时误打误撞用了正确的方式（难道是天赋和感觉）。今天用断点调试了一下才发现了正确的规律。还好
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>一般浏览器都进行的是冒牌的程序</p>
+<pre><code>当几个元素在不同的父子级夹杂的时候需要添加<span class="keyword">return</span> <span class="keyword">false</span>来解除冒牌
+
+如果是正常绑定子]]>
+    </summary>
+    
+      <category term="js" scheme="http://www.soledad.com.cn/categories/js/"/>
+    
+  </entry>
+  
+</feed>

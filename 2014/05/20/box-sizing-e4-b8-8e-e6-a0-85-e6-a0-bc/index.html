@@ -1,0 +1,760 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="一个前端的内心独白" />
+
+
+
+  <meta name="keywords" content="水御双氛,博客,前端,javascript" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="飘水寰界" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="最近在做小组的项目工具，个人负责css与html的架构
+刚开始做的时候因为项目比较符合有规律的布局，遂决定用栅格化布局
+
+栅格化布局之前有了解但理解的不深入。
+
+主要的栅格化定义了单个模块的宽度和每两个模块间的留白，其实现类似于表格布局，比较规范
+
+之前看到youku就是这样布局的而且这种布局比较方便弹性，bootstrap和大多数的外国网站也有用到了这种布局
+####    屏幕分辨率规划
+一般">
+<meta property="og:type" content="article">
+<meta property="og:title" content="box-sizing 与 栅格">
+<meta property="og:url" content="http://www.soledad.com.cn/2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/index.html">
+<meta property="og:site_name" content="飘水寰界">
+<meta property="og:description" content="最近在做小组的项目工具，个人负责css与html的架构
+刚开始做的时候因为项目比较符合有规律的布局，遂决定用栅格化布局
+
+栅格化布局之前有了解但理解的不深入。
+
+主要的栅格化定义了单个模块的宽度和每两个模块间的留白，其实现类似于表格布局，比较规范
+
+之前看到youku就是这样布局的而且这种布局比较方便弹性，bootstrap和大多数的外国网站也有用到了这种布局
+####    屏幕分辨率规划
+一般">
+<meta property="og:updated_time" content="2015-10-09T12:33:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="box-sizing 与 栅格">
+<meta name="twitter:description" content="最近在做小组的项目工具，个人负责css与html的架构
+刚开始做的时候因为项目比较符合有规律的布局，遂决定用栅格化布局
+
+栅格化布局之前有了解但理解的不深入。
+
+主要的栅格化定义了单个模块的宽度和每两个模块间的留白，其实现类似于表格布局，比较规范
+
+之前看到youku就是这样布局的而且这种布局比较方便弹性，bootstrap和大多数的外国网站也有用到了这种布局
+####    屏幕分辨率规划
+一般">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> box-sizing 与 栅格 | 飘水寰界 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?44c8c9cdf5a3db8bb69b8122c0f4b4dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">飘水寰界</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              box-sizing 与 栅格
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-05-20T12:05:50+08:00" content="2014-05-20">
+            2014-05-20
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/css/" itemprop="url" rel="index">
+                  <span itemprop="name">css</span>
+                </a>
+              </span>
+
+              
+              
+                ， 
+              
+
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/css/未分类/" itemprop="url" rel="index">
+                  <span itemprop="name">未分类</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>最近在做小组的项目工具，个人负责css与html的架构</p>
+<pre><code>刚开始做的时候因为项目比较符合有规律的布局，遂决定用栅格化布局
+
+栅格化布局之前有了解但理解的不深入。
+
+主要的栅格化定义了单个模块的宽度和每两个模块间的留白，其实现类似于表格布局，比较规范
+
+之前看到youku就是这样布局的而且这种布局比较方便弹性，<span class="keyword">bootstrap</span>和大多数的外国网站也有用到了这种布局
+</code></pre><p>####<br>    <strong><span style="font-size:14px;">屏幕分辨率规划</span></strong></p>
+<pre><code>一般的栅栏布局有对各种的屏幕响应性的布局设计，详见：http:<span class="comment">//v2.bootcss.com/scaffolding.html</span>
+
+需要了解各种屏幕浏览器分辨率,详见：http:<span class="comment">//screensiz.es/phone（点击右上角可以看到各种属性）</span>
+
+栅栏的原理是定义一个container的宽度，在有限的宽度内设置每个元素的margin和width来对各个属性配合
+
+比如：<span class="number">960</span>px的宽度，那么我们分配<span class="number">20</span>栅栏<span class="number">960</span>/<span class="number">20</span> = <span class="number">48</span>px;如果定义间隔为<span class="number">10</span>px那么实际的宽度就是<span class="number">38</span>px;
+
+我们可以在最外层设置margin:值为负值来使两端对齐(如果使用这个边距可以减一个margin来配置)，中间的元素我们通过margin-left和margin-right来进行配置。
+
+比如grid1{width:<span class="number">38</span>px;margin-left:<span class="number">5</span>px;margin-right:<span class="number">5</span>px;}
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>box-sizing属性的用法</strong></span></p>
+<pre><code>当然如果用栅栏布局的话，我们通过覆盖定义比如上例的grid1我们在后面覆盖了这个定义
+
+grid1{padding:<span class="number">10</span>px;&lt;span style=<span class="string">"line-height: 1.6em;"</span>&gt;}的话，那么一行并不能充满<span class="number">20</span>个栅格元素，&lt;/span&gt;
+
+&lt;span style=<span class="string">"line-height: 1.6em;"</span>&gt;这是因为问w3c的盒子模型定义的是内盒子宽度是<span class="variable">width</span>+padding+border控制的&lt;/span&gt;
+
+但是IE6及其之前的版本的盒子模型是通过<span class="variable">width</span>
+
+所以我们希望通过<span class="variable">width</span>控制宽度，然后padding进行内部拓展。可以通过给父级元素加栅格实现。
+
+而现在又一个<span class="built_in">box</span>-sizing的属性为我们带来了福音。
+
+<span class="built_in">box</span>-sizing:有border-<span class="built_in">box</span>和context-<span class="built_in">box</span>两个值
+
+如果是border-<span class="built_in">box</span>则以IE6为主的布局。content-<span class="built_in">box</span>为W3C推荐的值。
+
+所以在栅格布局的时候我们最好将值设置为border-<span class="built_in">box</span>这样值就是内部控制了。
+
+<span class="built_in">box</span>-sizing还能有效的对表单元素进行控制，因为表单元素对浏览器来说他们的盒子模型是不固定的。
+</code></pre><p>####<br>    <span style="font-size:14px;"><strong>Less辅助栅格布局</strong></span></p>
+<pre><code>我们可以通过<span class="operator">Less</span>或者sass对栅格进行弹性设计，这样不仅精确而且对于弹性的调整非常方便
+
+<span class="operator">Less</span>的特别之处在于变量计算和嵌套，对于设备的方式也非常容易，如果用grunt对<span class="operator">less</span>进行编译将能够非常有效的进行。下面是我用<span class="operator">less</span>对栅格化的布局
+
+&amp;nbsp;
+</code></pre><pre>
+/*grid under1200px*/ @gcell:45; @ggap:20; .grid1{width:(@gcell*1px-@ggap);} .grid2{width:(@gcell*2px-@ggap);} .grid3{width:(@gcell*3px-@ggap);} .grid4{width:(@gcell*4px-@ggap);} .grid5{width:(@gcell*5px-@ggap);} .grid6{width:(@gcell*6px-@ggap);} .grid7{width:(@gcell*7px-@ggap);} .grid8{width:(@gcell*8px-@ggap);} .grid9{width:(@gcell*9px-@ggap);} .grid10{width:(@gcell*10px-@ggap);} .grid11{width:(@gcell*11px-@ggap);} .grid12{width:(@gcell*12px-@ggap);} .grid13{width:(@gcell*13px-@ggap);} .grid14{width:(@gcell*14px-@ggap);} .grid15{width:(@gcell*15px-@ggap);} .grid16{width:(@gcell*16px-@ggap);} .grid17{width:(@gcell*17px-@ggap);} .grid18{width:(@gcell*18px-@ggap);} .grid19{width:(@gcell*19px-@ggap);} .grid20{width:(@gcell*20px-@ggap);} /*grid under1200px*/ @media(min-width:1200px){ @gcell:60; @ggap:30; .grid1{width:(@gcell*1px-@ggap);} .grid2{width:(@gcell*2px-@ggap);} .grid3{width:(@gcell*3px-@ggap);} .grid4{width:(@gcell*4px-@ggap);} .grid5{width:(@gcell*5px-@ggap);} .grid6{width:(@gcell*6px-@ggap);} .grid7{width:(@gcell*7px-@ggap);} .grid8{width:(@gcell*8px-@ggap);} .grid9{width:(@gcell*9px-@ggap);} .grid10{width:(@gcell*10px-@ggap);} .grid11{width:(@gcell*11px-@ggap);} .grid12{width:(@gcell*12px-@ggap);} .grid13{width:(@gcell*13px-@ggap);} .grid14{width:(@gcell*14px-@ggap);} .grid15{width:(@gcell*15px-@ggap);} .grid16{width:(@gcell*16px-@ggap);} .grid17{width:(@gcell*17px-@ggap);} .grid18{width:(@gcell*18px-@ggap);} .grid19{width:(@gcell*19px-@ggap);} .grid20{width:(@gcell*20px-@ggap);} } </pre>
+
+<pre><code>其中需要注意的是<span class="operator">less</span>变量的加减比如
+</code></pre><pre style="font-size: 13px;">
+@gcell*12px-@ggap</pre>
+
+<pre><code>就可以正常显示
+
+如果
+</code></pre><pre style="font-size: 13px;">
+(@gcell*12-@ggap)px</pre>
+
+<pre><code>会在px前加一个空格，无法正常显示。
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/05/20/overflow-e4-b8-8e-e6-b8-85-e9-99-a4/" rel="prev">overflow与清除</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/05/06/js-e7-bb-a7-e6-89-bf/" rel="next">js继承</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/"
+                   data-title="box-sizing 与 栅格" data-url="http://www.soledad.com.cn/2014/05/20/box-sizing-e4-b8-8e-e6-a0-85-e6-a0-bc/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="水御双氛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">水御双氛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个前端的内心独白</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Carlos guo</span>
+</div>
+
+
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"soledad"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

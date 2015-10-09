@@ -1,0 +1,807 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="一个前端的内心独白" />
+
+
+
+  <meta name="keywords" content="水御双氛,博客,前端,javascript" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="飘水寰界" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="git是一款非常独到的版本控制管理器,通过git可以方便的进行版本的管理，与svn及tfs的最大的不同是可以将各种版本的切换放在本地进行控制。是一款非常好用的方式，只在需要的时候才与远程进行同步。之前用svn和tfs也没发生多大的问题，但是其实问题很多，比如如果网断了就不能工作了，虽然版本的控制一直异常混乱，但是由于合并由人工完成而且参与同一个文件的合作机会并不是很多所以也一直没有造成太大的诟病。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度理解git">
+<meta property="og:url" content="http://www.soledad.com.cn/2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/index.html">
+<meta property="og:site_name" content="飘水寰界">
+<meta property="og:description" content="git是一款非常独到的版本控制管理器,通过git可以方便的进行版本的管理，与svn及tfs的最大的不同是可以将各种版本的切换放在本地进行控制。是一款非常好用的方式，只在需要的时候才与远程进行同步。之前用svn和tfs也没发生多大的问题，但是其实问题很多，比如如果网断了就不能工作了，虽然版本的控制一直异常混乱，但是由于合并由人工完成而且参与同一个文件的合作机会并不是很多所以也一直没有造成太大的诟病。">
+<meta property="og:updated_time" content="2015-10-09T12:33:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深度理解git">
+<meta name="twitter:description" content="git是一款非常独到的版本控制管理器,通过git可以方便的进行版本的管理，与svn及tfs的最大的不同是可以将各种版本的切换放在本地进行控制。是一款非常好用的方式，只在需要的时候才与远程进行同步。之前用svn和tfs也没发生多大的问题，但是其实问题很多，比如如果网断了就不能工作了，虽然版本的控制一直异常混乱，但是由于合并由人工完成而且参与同一个文件的合作机会并不是很多所以也一直没有造成太大的诟病。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 深度理解git | 飘水寰界 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?44c8c9cdf5a3db8bb69b8122c0f4b4dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">飘水寰界</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              深度理解git
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-10-06T12:08:44+08:00" content="2014-10-06">
+            2014-10-06
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/git/" itemprop="url" rel="index">
+                  <span itemprop="name">git</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>git是一款非常独到的版本控制管理器,通过git可以方便的进行版本的管理，与svn及tfs的最大的不同是可以将各种版本的切换放在本地进行控制。是一款非常好用的方式，只在需要的时候才与远程进行同步。之前用svn和tfs也没发生多大的问题，但是其实问题很多，比如如果网断了就不能工作了，虽然版本的控制一直异常混乱，但是由于合并由人工完成而且参与同一个文件的合作机会并不是很多所以也一直没有造成太大的诟病。</p>
+<pre><code>不过问题就是这样放在那里一直就是问题的根源。当时也是UNIX的创始人也遇到如此问题，但是当时由于是收费的一些版本控制貌似还是不错的，但是由于收费而且由于当时UNIX的版本控制和其合作的很不愉快所以研发出了这个耳熟能详的版本控制工具。貌似是一个大神一周的杰作，我三番五次学了很久也没能全部了解清楚，差距啊...
+
+放在本地的版本控制工具其原理就如同打游戏一般，我将其原理在我脑中的印象以下图的方式展示出来。
+
+![](http://img1.ph.126.net/5kQd6Y42RFzFi1JyCVPyMQ==/6608948890283217814.jpg)
+
+&amp;nbsp;
+
+先说说工作区。工作区就是文件夹，也就是我们说的当前目录。这个没什么问题，是非常简单的。文件系统及其复杂，也许是由于我不懂。因为其在linux，mac及windows系统上有着完全不一样的概念。用蓝色标注的是一些理论概念的东西。黄色标注的是一些操作。
+
+先说蓝色部分。
+
+1.就是传说中的工作区，也就是我们没将其形成git的时候的初始形态。
+
+而git就相当于在此之上建立了一个工作区又边部分的版本库。
+
+2.版本库分为两个部分，1个是stage也是暂存区2.另一个是分支。
+
+如果这样说相信一定是比较难理解，其实就相当于游戏部分，我们当前玩到的关卡就是工作区。
+
+当我们需要大老怪的的时候或者需要改天玩的时候需要将其添加到缓存区。
+
+我们这里就相当于点击了游戏的保存。也相当于文件下的ctrl+s如果没有按住这个或者当时没有保存的觉悟那我们的文件版本里就完全找不到的说了。
+
+3.那分支就相当于游戏中的人物槽，或者是游戏记录。可能有好几个朋友或者不同进度需要我们进行管理
+
+所以我们一般在玩游戏的过程中先建立一个主控制槽位，也就是git中的master。
+
+游戏中我们保持版本的流程一般是不顾一切的在游戏中挥洒，到了需要的时候，点击保存，然后我们提交到记录里面，有的情况需要给记录取一个名字或自动生成一个名字以供参考我们的记录是哪一个，当我们失败或者到了下一次点击开记录的时候一切都恢复了，所以这样是很简单的一个小工具应用的感觉。
+
+4.我们当前在哪个记录或者人物槽进行游戏，当前的人物槽即为git中的HEAD
+
+5.分支上面解释过，这里就不详细说了。
+
+6.有的游戏做好了备份后可以进行云存储，这一点会比较高端，因为只有放在了云里面（其实就是远端服务器，帮你不弄丢你的存储）不会丢失记录，这个云端的git游戏备份地方默认即是origin，可以将origin对应于github的所在库。
+
+有了对git认识的概念后我们应该属性一下git的操作，这个东西学好了对工作和学习帮助不少，毕竟全世界很多有名的开源组织的代码都在git上。但是git比游戏的版本控制要强大的多了，他可以记录我们的每一次的提交修改，并且随意回到其中提交过的记录中去。
+
+<span class="keyword">*</span><span class="keyword">*</span>a.git的下载<span class="keyword">*</span><span class="keyword">*</span>
+
+<span class="variable">&lt;span style="line-height: 1.6em;"&gt;</span>要开始git的学习首先要下载git，貌似只有windows的git需要下载。而且win8及其凶残。很难安装，总之，遇到问题请百度之，这里直接进入git安装好以后的学习。<span class="variable">&lt;/span&gt;</span>
+
+<span class="keyword">*</span><span class="keyword">*</span>b.git用户生成<span class="keyword">*</span><span class="keyword">*</span>
+
+当你安装好git并将其添加到环境变量后（一般是系统自带的）我们首先对身份进行确认，这就像刚下载一个新游戏的时候需要登录和注册了。如果不登录的话，也就是在游戏中，完全没有存在感，游戏不会告诉你建的工作区这是你的而已完全没有其他的影响
+
+建立git的账户我们用
+
+git config --global user.name &amp;<span class="comment">#39;Yourname&amp;#39;</span>
+
+got config --glabal user.email &amp;<span class="comment">#39;YourEmail&amp;#39;</span>
+
+我们将真实的名字和email填入即可告诉我们的git，你现在的主人是我，我们即将开始旅程，开始工作了。
+
+<span class="keyword">*</span><span class="keyword">*</span>c.git初始化<span class="keyword">*</span><span class="keyword">*</span>
+
+我们创建好内容后我们可以，开始开动了。我们首先将代码存放的工作区也就是我们即将开始的战场清理干净，然后对其输入
+
+git init
+
+这时候我们将自己的工作区完善完成了。
+
+<span class="keyword">*</span><span class="keyword">*</span>d.git缓存区[缓存区的意义，切换分支时保存缓存区]<span class="keyword">*</span><span class="keyword">*</span>
+
+有了战场我们可以创建文件和文件夹了，毕竟这才是程序员的武器库。
+
+当我们开发的心满意足的时候我们可以将内容添加到记录里面了。
+
+添加到记录之前我们可以通过git status先看看缓存区也就是stage的记录，如果有改变和需要提交的内容我们才开始进行接下来的工作。
+
+我们发现有些修改需要提交这时候我们用黄色1的操作将其添加到工作区中。git add [要提交的文件]如果此文件夹下的所有文件都需要提交则直接git add .即可，如果每次执行这个文件但是有不想提交的内容比如系统文件，工作区文件我的WebStorm每次都会将工作区环境写入一个.idea的文件夹里，这时候我们可以在根目录下面写一个.gitignore的文件里面有我们存储每次git add .不想添加的内容。
+
+比如我不想添加.idea文件夹里面的所有内容，那么我们就再.gitignore的文件里面写一句
+
+.idea/
+
+即可。不过这时候我们输入完git add .还并没有将其添加到git游戏的记录里面，只能说存到了缓存区里面。利用git status可以看出来缓存区stage的记录，缓存区意义不大，如果需要切换分支（git游戏的记录）则必须将缓存区的内容提交到分支里，否则不能正常切其他的分支。
+
+如果不存到缓存区里面，切分支则工作区的内容会被带到其他的分支中去。那么比如我现在打怪大到一半，突然想到记录2里面有个很重要的东西去取。但是我现在的记录还不想存入记录里面。那么我们可以将文件add后将现场封锁起来，现场是另一个记录区域的存在用于存储未完成的事业，可以用git stash list来查看现场的记录。我们用git stash将现场环境压入暂时的工作区里面，等我们去记录2里面把宝藏取到后再进行记录1中未完成的事业，这种情况常见于bug存在的时候我们开发并没有完成，但是中途需要插入一个对bug修改的分支那我们必须将add过后的git分支现场封锁，然后切换到另一个分支去救火，完事后我们再回来，将这个封锁的现场打开进行工作。如果你只有一个工作区的话用版本号git statsh pop即可，如果有多个的话....首先管理已经很混乱了，可以用git stash list查看需要恢复的工作区，将相应的工作区git stash apply stash<span class="comment">@{n}恢复。然后用git stash drop stash@{n}即可。stage是工作区的概念，如果我们管理的好，那么我们只需要在提交到真正的分支上前将内容add 到stage即可，如果我们切换分支没做好准备可以将现场封锁起来对分支切换进行进一步的工作。</span>
+
+<span class="keyword">*</span><span class="keyword">*</span>e.git的回退<span class="keyword">*</span><span class="keyword">*</span>
+
+因为我们add到缓存区，stage所以我们不管添加add几次也无法在提交到分支后的记录中显示出来，所以我们可以尽可能随时add到缓存区，这样方便我们在有问题的时候可以从缓存中回退，从缓存中回退对应的是黄色圆圈的7我们因为我们当前的工作区是HEAD所以我们回退的时候只要git reset HEAD即可将内容回退到工作区，非常的方便。以上就是工作区和缓存区之间的交互了。暂时还没有到分支，如果我们做好了以上这些步骤，那么我们就可以对记录进行调整与保存了。BTW如果有删除的文件我们用git add .并不能将这个修改提交到缓存至分支上，因为我们已经将这个文件记录进缓存里了，你删了他，但是缓存区的文件并没有感知，所以如果需要删除文件的花我们需要这样git remove [文件名称]和git add .相对应。缓存区的最大的意义也就在于我们将真正的记录前留一手，避免我们在工作的时候没有后悔药吃。
+
+我们现在只是将缓存区回退了，也就是说我们现在没有要提交到分支的内容了，但是我们的文件缺还是并没有回到我们加入缓存区的那个版本，通过git status我们发现系统现在还只是提示我们还有内容没有git add需要将修改提交到缓存区。我们现在时在做恢复，我们的缓存区已经到了上一个状态，我们想让工作区里的内容回到缓存区的状态的话我们可以用git checkout [需要将修改记录回退的文件]这样我们就可以将工作区回到上一个版本了。
+
+f.git的提交
+
+git缓存区的任务完成了，我们就可以对git进行提交了，首先我们先要确认需要提交的分支，我们可以用git branch来对当下正在编辑的分支进行确认，git branch语句不仅列出了所有正在使用的分支，在当下编辑的分支前会有一个<span class="keyword">*</span>号的。默认我们应该有一个master的分支，那我们就先在这个分支上提交好了。但是实际的工作中我们应该有一个git dev的分支，所有没有问题的提交都提交到这个分支里，master作为发布版本，不能有一点的动作只有等到git dev版本的分支稳定后才将git的dev分支合并到master上去。提交到分支的语句是git commmit -m &amp;quot;注释&amp;quot;。这样我们就成功提交到当前分支了，我们可以用git log来观看我们的工作流。git log 有很多参数我们可以用git log pretty=oneline的方式将其以更舒服的方式观看，其中log里显示了很多由十六进制生成的git的提交id我们可以通过这些id来对git进行恢复操作。git loa有很多参数，我们可以用假名的方式
+</code></pre><pre style="padding: 9.5px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; margin-top: 0px; margin-bottom: 10px; line-height: 20px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; border: 1px solid rgba(0, 0, 0, 0.14902); background-color: rgb(245, 245, 245);">
+`git config --global alias.lg &quot;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;`</pre>
+
+<pre><code>这是我见过的最好的展现git的记录的方式，在以后我们只要git lg便能展现出git的各个分支提交合并的关联情况。
+
+![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138492662</span>982594cbd<span class="number">1a942114472</span>aeeb<span class="number">5f0a502</span>faed1000/0)
+
+g.git的恢复
+
+要像从git的分支中回退到工作区中比较麻烦。我们知道当前工作区是HEAD那么回退到上一个版本即是git reset --hard HEAD^ 其中^是代表上一个版本的意思，其中注意的是windows的情况下^不能正常运作，要添加git reset --hard &amp;quot<span class="comment">;HEAD^&amp;quot;来恢复即可。如果想恢复到其中某一个版本只要git reset --hard &amp;quot;版本号即可以回到任意的版本号&amp;quot;。</span>
+
+h.git的分支
+
+git如果只有一个分支就没什么意义了，同样的如果写代码只在一个里面开发的话那么不仅恢复起来比较痛苦，而且对于功能的区分不是很明显。就像游戏中的任务槽一样，如果游戏都是不断的在覆盖自己当前的记录就没什么一样，我想重新体验其中的某一关都是不行的（貌似现在的游戏都这样）git就完全不一样了。我们只要将每一个关卡（功能）开一个分支即可，而且开的新分支可以完全在之前的分支基础上建立。比如我现在要在master的基础上开一个dev的分支那么我只要用语句git checkout -b dev即可 git cehckout 分支名是转到相应分支的意思-b就是顺便创建的意思。当我开发完成git的这个分支以后我将这个功能合并到master即可。
+
+igit的分支合并
+
+git创建并转到相应的分支上的时候我们需要将此git所在分支的事情做完才可以。也就是说当前git工作区的内容全部提交到分支上，要么我们git的内容在缓存区里，并且缓存区被保存。当我们切换分支无外乎就是开发新的功能了。开发完成后就可以合并到需要合并的主分支上去。用git merge 分支名 的方式进行合并，当合并完成后我们再git branch -d 分支名(删除分支)一个完整的合并功能操作就完成了，但是这种合并仿佛我们没用到分支的感觉，如下图
+
+1。![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490879</span><span class="number">37492135</span>fbf4bbd24dfcbc<span class="number">18349a8a59</span>d<span class="number">36d000/0</span>)
+
+2.![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490882</span><span class="number">35627813</span>efe<span class="number">7649b4f00</span><span class="number">8900e5365</span>bb<span class="number">72323000/0</span>)
+
+3.![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490883</span><span class="number">510324231a83</span>7e5d4aee<span class="number">844d3e46</span>92ba<span class="number">50f5000/0</span>)
+
+4.![](http://www.liaoxuefeng.com/files/attachments/<span class="number">00138490886</span>7187c83ca970bf0f46efa19badad<span class="number">99c40235000</span>/0)
+
+如果是自己的流程没什么问题，而且只要自己能够保证好之间的关系就好，但是有的时候有的老板要求很残酷的，像我以前的老板要求看到合并的流程其实是非常脑残的。那么我们可以用git merge --no-ff 分支名 -m &amp;quot<span class="comment">;注释&amp;quot;的方式记录一个合并的操作状态</span>
+
+jgit的tag及发布
+
+当我们有一个稳定的版本面世的时候我们可以将其作为一个版本的发布比如git tag v1.0这样我们就相当于给master的这个当前的状态一个可以发布的标签。当然我们也可以用git tag -d v1.0来删除这个版本，同样可以用git tag v1.0 版本名 来给当前分支的一个版本一个tag。默认的git tag是将所有的git的tag列出来。
+
+jgit的远程初始化
+
+git的远程可以选择很多不错的git库存放，可以自己搭建linux一般水平如我可以通过github来进行代码的存放。只要在github上注册一个账号并点击右上角的加号，点击create repository即可以添加一个库。添加好了库，可以将远程的库clone到本地，作为远程库的一个副本。通过git clone 远程库名称。远程库名称有两种一种是https协议的和git@github.com/用户名/git库名.git后一种速度明显优于前面。从远程clone过来的库是将远程的库clone过来，如果远程已经有不错的开源库这样是非常方便的，如果你像将本地的库推送到远端的空库中可以通过git remote add origin 远程库名可以将库的名称添加到本地对应的地方，然后初次的时候通过git push -u origin master即可.同样本地的库分支推到远程可以用git push origin branchname，本地的tag推送到远程可以用git push origin tagname。能推送的首要是确保你有推送权限，推送的权限一般会给本地的机器一个ssh-keygen。通过ssh-keygen -t rsa -C &amp;quot<span class="comment">;username@github.com&amp;quot;可以通过此种方式注册（windows上必须用powerpc等gitshell才可以，直接将git加入环境变量是不可取的）然后按照提示提交key的存储位置和密码。如果默认存储位置和密码为空一路回车就可以了，然后找到相应的id_rsa.pub（我的默认生成在mac里是User/username/.ssh/id_rsa.pub）之类的公开类复制好，黏贴到github的setting里的deploy key里为这个可以添加一个名字即可。</span>
+
+但是这个很坑爹的是，如果你已经给一个库一个key以后这个key就不能再给其他repo用了，添加的时候就会提示，如果在一台电脑上同时操作两个库的话，push的时候就会提示两个库的key有冲突或者没有权限提交...种种，所以记得一台电脑当下智能推送一个有key的repo如果有其他repo需要的话，先把用过这个库的repo的key删掉，然后用在当下编辑的库中。具体觉得不应该如此，所以会进一步做一下研究的。
+
+kgit的远程推送和获取最新
+
+如果是多人合作那么务必记得要git pull一下之后解决conflict并commit到分支后再push。git pull即是讲所有的文件从远程更新到本地。
+
+而且git里有一个wiki也有一个git的版本，觉得这是一个很好的记录学习状态的方式。
+
+l对其他开源库的操作。
+
+如果需要对其他库操作，那么可以点击右上角的fork标志
+
+fork后到自己的名下生成一个类似的库的内容，这时候你可以在你自己的库里随意的进行更新推送，然后觉得有必要将自己的代码融入进开源的世界可以发一个pull request来请求作者把自己的修改融入进去。
+
+好久没写blog说实话感觉自己的blog写的很凌乱，主要是内容太多了，自己学习的话非常容易，总结确实不是一个容易的事情，但是不总结的话很容易忘掉而且前进也有瓶颈，一般的学习看视频我都懒得看感觉太浪费时间，写blog是一个更加残酷的现实。希望以后可以提升自己写blog的经验，同时发信息要写一个blog也不是那么容易的事情，我会继续努力花时间改善的，我想以后的内容和经验可以分章节写在不同主题里面。希望大家提出宝贵的意见
+
+我这次的git学习的道路感谢这篇blog对我的启发。
+
+[http://www.liaoxuefeng.com/wiki/<span class="number">00137395163</span><span class="number">05929606</span>dd<span class="number">18361248578</span>c<span class="number">67b8067c8</span>c<span class="number">017b000</span>](http://www.liaoxuefeng.com/wiki/<span class="number">00137395163</span><span class="number">05929606</span>dd<span class="number">18361248578</span>c<span class="number">67b8067c8</span>c<span class="number">017b000</span>)
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/10/12/e6-b7-b1-e5-85-a5-e5-ad-a6-e4-b9-a0vi/" rel="prev">深入学习vi</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/" rel="next">android webview远程调试</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/"
+                   data-title="深度理解git" data-url="http://www.soledad.com.cn/2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="水御双氛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">水御双氛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个前端的内心独白</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Carlos guo</span>
+</div>
+
+
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"soledad"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

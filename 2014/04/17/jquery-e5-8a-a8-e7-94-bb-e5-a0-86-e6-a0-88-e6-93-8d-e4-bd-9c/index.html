@@ -1,0 +1,752 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="一个前端的内心独白" />
+
+
+
+  <meta name="keywords" content="水御双氛,博客,前端,javascript" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="飘水寰界" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="转载请注明….来自soledad.com.cn
+####    原理
+jquery的动画堆栈原理是将所有的动画函数压入一个数组中
+
+当运行的时候将队列中的函数取出并将这个函数从数组中删除
+
+这个数组在jquery中叫做&amp;amp;quot;fx&amp;amp;quot;
+
+可由queue(&amp;amp;quot;fx&amp;amp;quot;)获得
+
+最原始的加入队列的函数即为queue
+####    队列
+$(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery动画堆栈操作">
+<meta property="og:url" content="http://www.soledad.com.cn/2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/index.html">
+<meta property="og:site_name" content="飘水寰界">
+<meta property="og:description" content="转载请注明….来自soledad.com.cn
+####    原理
+jquery的动画堆栈原理是将所有的动画函数压入一个数组中
+
+当运行的时候将队列中的函数取出并将这个函数从数组中删除
+
+这个数组在jquery中叫做&amp;amp;quot;fx&amp;amp;quot;
+
+可由queue(&amp;amp;quot;fx&amp;amp;quot;)获得
+
+最原始的加入队列的函数即为queue
+####    队列
+$(">
+<meta property="og:updated_time" content="2015-10-09T12:33:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jquery动画堆栈操作">
+<meta name="twitter:description" content="转载请注明….来自soledad.com.cn
+####    原理
+jquery的动画堆栈原理是将所有的动画函数压入一个数组中
+
+当运行的时候将队列中的函数取出并将这个函数从数组中删除
+
+这个数组在jquery中叫做&amp;amp;quot;fx&amp;amp;quot;
+
+可由queue(&amp;amp;quot;fx&amp;amp;quot;)获得
+
+最原始的加入队列的函数即为queue
+####    队列
+$(">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> jquery动画堆栈操作 | 飘水寰界 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?44c8c9cdf5a3db8bb69b8122c0f4b4dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">飘水寰界</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              jquery动画堆栈操作
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-04-17T14:16:04+08:00" content="2014-04-17">
+            2014-04-17
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/未分类/" itemprop="url" rel="index">
+                  <span itemprop="name">未分类</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>转载请注明….来自soledad.com.cn</p>
+<p>####<br>    <strong>原理</strong></p>
+<pre><code>jquery的动画堆栈原理是将所有的动画函数压入一个数组中
+
+当运行的时候将队列中的函数取出并将这个函数从数组中删除
+
+这个数组在jquery中叫做&amp;quot;fx&amp;quot;
+
+可由<span class="built_in">queue</span>(&amp;quot;fx&amp;quot;)获得
+
+最原始的加入队列的函数即为<span class="built_in">queue</span>
+</code></pre><p>####<br>    <strong>队列</strong></p>
+<pre><code>$(&amp;<span class="preprocessor">#<span class="number">39</span>;div&amp;#<span class="number">39</span>;).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);})</span>
+
+如果需要两个以上的函数那么必须在此函数后执行要加入dequeue
+
+可以$(&amp;<span class="preprocessor">#<span class="number">39</span>;div&amp;#<span class="number">39</span>;).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;).dequeue();}).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);});</span>
+
+也可以$(&amp;<span class="preprocessor">#<span class="number">39</span>;div&amp;#<span class="number">39</span>;).queue(function(next){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);next()}).queue(function(){$(this).css(&amp;#<span class="number">39</span>;height&amp;#<span class="number">39</span>;:&amp;#<span class="number">39</span>;<span class="number">50</span>px&amp;#<span class="number">39</span>;);});</span>
+
+**延时和停止**
+
+如果需要延时则使用.delay()即可。
+
+.stop函数的第一个param意思为是否将后续动画从队列中移除，第二个参数意思是是否将动画执行到最后。
+
+将函数队列置空可以用.<span class="built_in">queue</span>(&amp;quot;fx&amp;quot;,[]);也可以用$.[clearQueue()](http:<span class="comment">//api.jquery.com/clearQueue/ "Permalink to .clearQueue()")</span>
+
+如果希望直接到动画的最终点可以用$.[clearQueue() + .stop(<span class="literal">true</span>,<span class="literal">true</span>);也可以用.finish](http:<span class="comment">//api.jquery.com/clearQueue/ "Permalink to .clearQueue()")</span>
+</code></pre><p>####<br>    <strong>集成动画</strong></p>
+<pre><code>现在的动画被简化为<span class="class">.animate</span>({},time)括号中的为<span class="tag">css</span>参数值+时间即可
+
+最经典的集成有三组
+
+<span class="class">.fadeIn</span>() <span class="class">.fadeOut</span>() <span class="class">.fadeToggle</span>();
+
+<span class="class">.show</span>()<span class="keyword">&amp;</span><span class="tag">nbsp</span>;<span class="keyword">&amp;</span><span class="tag">nbsp</span>; <span class="class">.hide</span>()<span class="keyword">&amp;</span><span class="tag">nbsp</span>;<span class="keyword">&amp;</span><span class="tag">nbsp</span>;<span class="keyword">&amp;</span><span class="tag">nbsp</span>; <span class="class">.toggle</span>();
+
+<span class="class">.slideUp</span>() <span class="class">.slideDown</span>() <span class="class">.slideToggle</span>();
+
+括号中参数可填执行时间或者填入<span class="attribute">callback</span>
+</code></pre><p>####<br>    <strong>后续执行</strong></p>
+<pre><code>可以同.promise<span class="literal">()</span>函数来进行
+
+.promise函数返回一个deffered对象
+
+这个会和ajax的效果一样
+
+可以通过.done<span class="literal">()</span> .<span class="keyword">then</span><span class="literal">()</span> .fail<span class="literal">()</span> .always<span class="literal">()</span> .resolve<span class="literal">()</span> .resolveWith<span class="literal">()</span> .reject<span class="literal">()</span> .rejectWith<span class="literal">()</span>来进行将返回的函数加在动画堆栈的相应部分
+
+更容易的方式是$.when(effect<span class="literal">()</span>).done(function<span class="literal">()</span>{})
+
+这样便可以很容易的操作在effect<span class="literal">()</span>函数执行完后进行
+</code></pre><p>####<br>    <strong>缓冲</strong></p>
+<pre><code>&amp;nbsp<span class="comment">;</span>
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/04/23/js-e7-b1-bb-e5-9e-8b-e5-88-a4-e6-96-ad/" rel="prev">js类型判断</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/04/17/e4-ba-8b-e4-bb-b6-e7-9a-84-e7-bb-91-e5-ae-9a-e4-b8-8e-e5-86-92-e6-b3-a1/" rel="next">事件的绑定与冒泡</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/"
+                   data-title="jquery动画堆栈操作" data-url="http://www.soledad.com.cn/2014/04/17/jquery-e5-8a-a8-e7-94-bb-e5-a0-86-e6-a0-88-e6-93-8d-e4-bd-9c/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="水御双氛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">水御双氛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个前端的内心独白</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Carlos guo</span>
+</div>
+
+
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"soledad"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,727 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="一个前端的内心独白" />
+
+
+
+  <meta name="keywords" content="水御双氛,博客,前端,javascript" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="飘水寰界" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="最近生活有些颓废，大概是比较乱没有一个方向，这之间和客户的纠缠让我感到神情疲惫，尤其是精力分散了好多。
+而且老大还邀请一起写书，朋友创业支持，老婆也需要陪，我身上的肉也要我锻炼，衣服也要洗，每天各种纠缠的小细节，让我需要沉淀一下。
+
+还好最近工作没什么内容，不然要死了。工作没内容也是非常的发慌的。
+
+话说我真的对什么客户的来说非常的给脸色，见到脾气这么好的顾客还真的是非常的运气。
+
+近期在学nod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="版本号的语义化">
+<meta property="og:url" content="http://www.soledad.com.cn/2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/index.html">
+<meta property="og:site_name" content="飘水寰界">
+<meta property="og:description" content="最近生活有些颓废，大概是比较乱没有一个方向，这之间和客户的纠缠让我感到神情疲惫，尤其是精力分散了好多。
+而且老大还邀请一起写书，朋友创业支持，老婆也需要陪，我身上的肉也要我锻炼，衣服也要洗，每天各种纠缠的小细节，让我需要沉淀一下。
+
+还好最近工作没什么内容，不然要死了。工作没内容也是非常的发慌的。
+
+话说我真的对什么客户的来说非常的给脸色，见到脾气这么好的顾客还真的是非常的运气。
+
+近期在学nod">
+<meta property="og:updated_time" content="2015-10-09T12:33:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="版本号的语义化">
+<meta name="twitter:description" content="最近生活有些颓废，大概是比较乱没有一个方向，这之间和客户的纠缠让我感到神情疲惫，尤其是精力分散了好多。
+而且老大还邀请一起写书，朋友创业支持，老婆也需要陪，我身上的肉也要我锻炼，衣服也要洗，每天各种纠缠的小细节，让我需要沉淀一下。
+
+还好最近工作没什么内容，不然要死了。工作没内容也是非常的发慌的。
+
+话说我真的对什么客户的来说非常的给脸色，见到脾气这么好的顾客还真的是非常的运气。
+
+近期在学nod">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 版本号的语义化 | 飘水寰界 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?44c8c9cdf5a3db8bb69b8122c0f4b4dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">飘水寰界</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              版本号的语义化
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-08-18T09:42:05+08:00" content="2014-08-18">
+            2014-08-18
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/未分类/" itemprop="url" rel="index">
+                  <span itemprop="name">未分类</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>最近生活有些颓废，大概是比较乱没有一个方向，这之间和客户的纠缠让我感到神情疲惫，尤其是精力分散了好多。</p>
+<pre><code>而且老大还邀请一起写书，朋友创业支持，老婆也需要陪，我身上的肉也要我锻炼，衣服也要洗，每天各种纠缠的小细节，让我需要沉淀一下。
+
+还好最近工作没什么内容，不然要死了。工作没内容也是非常的发慌的。
+
+话说我真的对什么客户的来说非常的给脸色，见到脾气这么好的顾客还真的是非常的运气。
+
+近期在学nodejs。因为考虑到，Nodejs这个东西<span class="number">09</span>年就出来了
+
+<span class="number">11</span>年引入国内后，记得很清晰，<span class="number">13</span>年反反复复几次研究这个东西，用express写了两回blog依然没有把他拿下。
+
+现在感觉NODE作为中间层对前端的工作有非常大而且积极的影响，所以感觉这次如果再不拿下就老了，况且工作中已经各种融合了NODEjs
+
+所以这次一定要学会，尤其是BIGPIPE技术，淘宝已经做到了，一定要坚持下去，所以我要在此开辟一个专门学习Nodejs的小专栏。
+
+而且是不同的细节方面都要全力的进行。
+
+今天研究了解到的是之前一直没有关注的版本号，版本号这个东西，之前只是一直在用，只是觉得<span class="number">2.0</span><span class="number">.0</span>一定大于<span class="number">1.0</span><span class="number">.0</span>哪个字母代表什么意思没有深究。
+
+今天看了这篇文章http:<span class="comment">//semver.org/lang/zh-CN/恍然大悟。</span>
+
+三个版本号都分别代表的是
+</code></pre><ol>
+<li>主版本号：当你做了不兼容的API 修改，</li>
+<li>次版本号：当你做了向下兼容的功能性新增，</li>
+<li><p>修订号：当你做了向下兼容的问题修正。</p>
+<p>所以</p>
+<p>以下关键词MUST、MUST NOT、REQUIRED、SHALL、SHALL NOT、SHOULD、SHOULD NOT、 RECOMMENDED、MAY、OPTIONAL 依照RFC 2119 的叙述解读。（译注：为了保持语句顺畅， 以下文件遇到的关键词将依照整句语义进行翻译，在此先不进行个别翻译。）</p>
+<p>使用语义化版本控制的软件&ldquo;必须MUST&rdquo;定义公共API。该API可以在代码中被定义或出现于严谨的文件内。无论何种形式都应该力求精确且完整。</p>
+<p>标准的版本号&ldquo;必须MUST&rdquo;采用XYZ的格式，​​ 其中X、Y和Z为非负的整数，且&ldquo;禁止MUST NOT&rdquo;在数字前方补零。X是主版本号、Y是次版本号、而Z为修订号。每个元素&ldquo;必须MUST&rdquo;以数值来递增。例如：1.9.1 -&gt; 1.10.0 -&gt; 1.11.0。</p>
+<p>标记版本号的软件发行后，&ldquo;禁止MUST NOT&rdquo;改变该版本软件的内容。任何修改都&ldquo;必须MUST&rdquo;以新版本发行。</p>
+<p>主版本号为零（0.yz）的软件处于开发初始阶段，一切都可能随时被改变。这样的公共API 不应该被视为稳定版。</p>
+<p>1.0.0 的版本号用于界定公共API 的形成。这一版本之后所有的版本号更新都基于公共API 及其修改内容。</p>
+<p>修订号Z（xyZ | x &gt; 0）&ldquo;必须MUST&rdquo;在只做了向下兼容的修正时才递增。这里的修正指的是针对不正确结果而进行的内部修改。</p>
+<p>次版本号Y（xYz | x &gt; 0）&ldquo;必须MUST&rdquo;在有向下兼容的新功能出现时递增。在任何公共API的功能被标记为弃用时也&ldquo;必须MUST&rdquo;递增。也&ldquo;可以MAY&rdquo;在内部程序有大量新功能或改进被加入时递增，其中&ldquo;可以MAY&rdquo;包括修订级别的改变。每当次版本号递增时，修订号&ldquo;必须MUST&rdquo;归零。</p>
+<p>主版本号X（Xyz | X &gt; 0）&ldquo;必须MUST&rdquo;在有任何不兼容的修改被加入公共API时递增。其中&ldquo;可以MAY&rdquo;包括次版本号及修订级别的改变。每当主版本号递增时，次版本号和修订号&ldquo;必须MUST&rdquo;归零。</p>
+<p>先行版本号&ldquo;可以MAY&rdquo;被标注在修订版之后，先加上一个连接号再加上一连串以句点分隔的标识符号来修饰。标识符号&ldquo;必须MUST&rdquo;由ASCII码的英数字和连接号[0-9A-Za-z-]组成，且&ldquo;禁止MUST NOT&rdquo;留白。数字型的标识符号&ldquo;禁止MUST NOT&rdquo;在前方补零。先行版的优先级低于相关联的标准版本。被标上先行版本号则表示这个版本并非稳定而且可能无法达到兼容的需求。范例：1.0​​.0-alpha、1.0.0-alpha.1、 1.0.0-0.3.7、1.0.0-x.7.z.92。</p>
+<p>版本编译信息&ldquo;可以MAY&rdquo;被标注在修订版或先行版本号之后，先加上一个加号再加上一连串以句点分隔的标识符号来修饰。标识符号&ldquo;必须MUST&rdquo;由ASCII的英数字和连接号[0-9A-Za-z-]组成，且&ldquo;禁止MUST NOT&rdquo;留白。当判断版本的优先层级时，版本编译信息&ldquo;可SHOULD&rdquo;被忽略。因此当两个版本只有在版本编译信息有差别时，属于相同的优先层级。范例：1.0.0-alpha+001、1.0.0+20130313144700、 1.0.0-beta+exp.sha.5114f85。</p>
+<p>版本的优先层级指的是不同版本在排序时如何比较。判断优先层级时，&ldquo;必须MUST&rdquo;把版本依序拆分为主版本号、次版本号、修订号及先行版本号后进行比较（版本编译信息不在这份比较的列表中）。由左到右依序比较每个标识符号，第一个差异值用来决定优先层级：主版本号、次版本号及修订号以数值比较，例如1.0.0 &lt; 2.0.0 &lt; 2.1.0 &lt; 2.1.1。当主版本号、次版本号及修订号都相同时，改以优先层级比较低的先行版本号决定。例如：1.0.0-alpha &lt; 1.0.0。有相同主版本号、次版本号及修订号的两个先行版本号，其优先层级&ldquo;必须MUST&rdquo;透过由左到右的每个被句点分隔的标识符号来比较，直到找到一个差异值后决定：只有数字的标识符号以数值高低比较，有字母或连接号时则逐字以ASCII的排序来比较。数字的标识符号比非数字的标识符号优先层级低。若开头的标识符号都相同时，栏 ​​位比较多的先行版本号优先层级比较高。范例：1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0- rc.1 &lt; 1.0.0。</p>
+<p>一般来说项目的开始时是0.0.1启动的，然后根据需要可以拓展分支用MAY的方式在标准版本号之后建立-alpha或者alpha.beta进行开发。开发后融入主版本号中。主版本号在有稳定的版本时生成.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</li>
+</ol>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/" rel="prev">android webview远程调试</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/07/18/mooc-e5-9c-a8-e7-ba-bf-e8-af-be-e5-a0-82-e3-80-90-e6-9c-89-e7-a9-ba-e4-b9-9f-e5-be-97-e5-ad-a6-e4-b9-a0-e4-b8-80-e4-b8-8b-e3-80-91/" rel="next">MOOC 在线课堂【有空也得学习一下】</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/"
+                   data-title="版本号的语义化" data-url="http://www.soledad.com.cn/2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="水御双氛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">水御双氛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个前端的内心独白</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Carlos guo</span>
+</div>
+
+
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"soledad"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

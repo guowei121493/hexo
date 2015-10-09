@@ -1,0 +1,800 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="一个前端的内心独白" />
+
+
+
+  <meta name="keywords" content="水御双氛,博客,前端,javascript" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="飘水寰界" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="Android&amp;nbsp;webview远程调试之前只是有耳闻过，一直没有实操过。因为和开发ios一样，门槛比较高。
+但毕竟是屌丝领军所以还好，唯一的条件是需要有一个android4.0版本以上配置的机器（也还好现在很多厂商已经可以配上了）。
+
+还好当时买了个nesus10而且对于生活已经渐渐的离不开了。这货可以直接升级到nesus4.4...
+
+&amp;amp;nbsp;
+
+1.好了废话不多说，首先一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android webview远程调试">
+<meta property="og:url" content="http://www.soledad.com.cn/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/index.html">
+<meta property="og:site_name" content="飘水寰界">
+<meta property="og:description" content="Android&amp;nbsp;webview远程调试之前只是有耳闻过，一直没有实操过。因为和开发ios一样，门槛比较高。
+但毕竟是屌丝领军所以还好，唯一的条件是需要有一个android4.0版本以上配置的机器（也还好现在很多厂商已经可以配上了）。
+
+还好当时买了个nesus10而且对于生活已经渐渐的离不开了。这货可以直接升级到nesus4.4...
+
+&amp;amp;nbsp;
+
+1.好了废话不多说，首先一">
+<meta property="og:updated_time" content="2015-10-09T12:33:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="android webview远程调试">
+<meta name="twitter:description" content="Android&amp;nbsp;webview远程调试之前只是有耳闻过，一直没有实操过。因为和开发ios一样，门槛比较高。
+但毕竟是屌丝领军所以还好，唯一的条件是需要有一个android4.0版本以上配置的机器（也还好现在很多厂商已经可以配上了）。
+
+还好当时买了个nesus10而且对于生活已经渐渐的离不开了。这货可以直接升级到nesus4.4...
+
+&amp;amp;nbsp;
+
+1.好了废话不多说，首先一">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> android webview远程调试 | 飘水寰界 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?44c8c9cdf5a3db8bb69b8122c0f4b4dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">飘水寰界</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              android webview远程调试
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-08-18T18:12:31+08:00" content="2014-08-18">
+            2014-08-18
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/未分类/" itemprop="url" rel="index">
+                  <span itemprop="name">未分类</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>Android&nbsp;webview远程调试之前只是有耳闻过，一直没有实操过。因为和开发ios一样，门槛比较高。</p>
+<pre><code>但毕竟是屌丝领军所以还好，唯一的条件是需要有一个android4.0版本以上配置的机器（也还好现在很多厂商已经可以配上了）。
+
+还好当时买了个nesus10而且对于生活已经渐渐的离不开了。这货可以直接升级到nesus4.4...
+
+&amp;nbsp<span class="comment">;</span>
+
+1.好了废话不多说，首先一切的开始源于APP是否加了可以让webview能够调试的代码
+
+代码如下
+
+要在apk的manifest里面加上这么一句
+
+在android开发的时候配置文件manifest中需要加一段 &amp;nbsp<span class="comment">;详见https://developer.chrome.com/extensions/debugger&amp;nbsp;</span>
+
+{
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;&amp;quot;name&amp;quot;: &amp;quot;My extension&amp;quot;,</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;...</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;&amp;quot;permissions&amp;quot;: [</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;quot;debugger&amp;quot;,</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;],</span>
+
+&amp;nbsp<span class="comment">;&amp;nbsp; &amp;nbsp;...</span>
+
+}
+
+然后还要在Main文件里加上这个句
+</code></pre><pre class="prettyprint" style="padding: 0.99em; margin-top: 2em; margin-bottom: 2em; box-sizing: border-box; font-family: 'Source Code Pro', sans-serif; font-size: 0.95em; word-wrap: break-word; box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px, rgba(0, 0, 0, 0.14902) 0px 0px 3px; position: relative; overflow-x: auto; line-height: 1.8em; color: rgb(0, 136, 0); background-color: rgb(247, 247, 247);">
+<span class="kwd" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 136);">if</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">Build</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">VERSION</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">SDK_INT </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">&gt;=</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">Build</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">VERSION_CODES</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">KITKAT</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+    </span><span class="kwd" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 136);">if</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="lit" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 102, 102);">0</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">!=</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> getApplcationInfo</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">().</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">flags </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">&amp;=</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">ApplicationInfo</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">FLAG_DEBUGGABLE </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);"> </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+        </span><span class="typ" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 0, 102);">WebView</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">setWebContentsDebuggingEnabled</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="kwd" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 136);">true</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+    </span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(0, 0, 0);">
+</span><span class="pun" style="padding: 0px; margin: 0px; box-sizing: border-box; color: rgb(102, 102, 0);">}</span></pre>
+
+<pre><code>详见：https:<span class="comment">//developer.chrome.com/devtools/docs/remote-debugging#debugging-webviews</span>
+
+<span class="number">2.</span>插上设备的USB后进行OEM的安装
+
+详见http:<span class="comment">//developer.android.com/tools/extras/oem-usb.html</span>
+
+不过这里有个地方就是如果是三星或者google得下一份驱动到本地然后将自动安装的驱动改为本地的驱动
+
+我的nesus10也不例外。当然更淫荡的是除了原生的驱动也许还有interface之类的驱动也得完美无缺的装上。
+
+安装方式【以win7为例】
+
+<span class="number">1.</span>链接设备
+
+<span class="number">2.</span>点击我的电脑右键选择管理
+
+![](http:<span class="comment">//t3.qpic.cn/mblogpic/c44eaa126aea0ec3c4ee/2000)</span>
+
+<span class="number">3.</span>选择设备管理器
+
+<span class="number">4.</span>找到相应的设备后
+
+<span class="number">5.</span>点击右键选择更新驱动软件
+
+![](http:<span class="comment">//t3.qpic.cn/mblogpic/b86e12a8d73661b07fe8/2000)</span>
+
+<span class="number">6.</span>选择浏览计算机以查找驱动程序软件
+
+![](http:<span class="comment">//t3.qpic.cn/mblogpic/0f03ed7ea8b5e4a533c2/2000)</span>
+
+&amp;nbsp; （根据这里面的说明安装http:<span class="comment">//developer.android.com/tools/extras/oem-usb.html）我由于是googleNesus系列就用了http://developer.android.com/sdk/win-usb.html</span>
+
+<span class="number">7.</span>点击下一步安装驱动
+
+这时候打开就可以看到了
+
+点击inspect进入调试模式（这里如果第一次进的话，不白屏的话，那我就跪了）
+
+&amp;nbsp;
+
+这个白屏的问题花了我一下午时间啊。
+
+找了一下原因原来是有两个变量undefined[
+</code></pre><pre class="default prettyprint prettyprinted" style="margin-top: 0px; margin-bottom: 10px; padding: 5px; border: 0px; font-size: 14px; vertical-align: baseline; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; overflow: auto; width: auto; max-height: 600px; word-wrap: normal; color: rgb(0, 0, 0); line-height: 17.804800033569336px; background: rgb(238, 238, 238);">
+`<span class="str" style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; color: rgb(128, 0, 0); background: transparent;">Uncaught ReferenceError: InspectorFrontendAPI is not defined</span>`</pre>
+
+<pre><code>&amp;nbsp<span class="comment">;</span>
+</code></pre><pre class="default prettyprint prettyprinted" style="margin-top: 0px; margin-bottom: 10px; padding: 5px; border: 0px; font-size: 14px; vertical-align: baseline; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; overflow: auto; width: auto; max-height: 600px; word-wrap: normal; color: rgb(0, 0, 0); line-height: 17.804800033569336px; background: rgb(238, 238, 238);">
+`<span class="str" style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; color: rgb(128, 0, 0); background: transparent;">Uncaught ReferenceError: WebInspector is not defined</span>`</pre>
+
+<pre><code>]
+
+找了半天确实stackoverflow上有一篇一样的问题，但是没人回答...
+
+<span class="symbol">http:</span>/<span class="regexp">/stackoverflow.com/questions</span><span class="regexp">/21801324/inspectorfrontendapi</span>-is-not-defined-during-chrome-remote-debugging
+
+又用fiddler抓包工具发现...尼玛中国太给力了，不然技术员怎么能锻炼出解决问题的能力呢，是将里面的链接给强了，而且这个强的不是一般的厉害。
+
+我用了三种代理的方式翻墙，facebook都看腻了还是访问不到,最后只好全局设置vpn（推荐greenvpn免费）...最终解决了，不过还好这个访问的是配置文件，也就是说执行完一次如果保存成功，将不再继续访问了。
+
+好了，大功告成，慢慢打断点调试吧.
+
+![](<span class="symbol">http:</span>/<span class="regexp">/t3.qpic.cn/mblogpic</span><span class="regexp">/60213ed62707d918a722/</span><span class="number">460</span>)
+
+参考文章
+
+<span class="symbol">https:</span>/<span class="regexp">/developer.chrome.com/devtools</span><span class="regexp">/docs/remote</span>-debugging
+
+<span class="symbol">https:</span>/<span class="regexp">/developer.chrome.com/devtools</span><span class="regexp">/docs/debugger</span>-protocol
+
+<span class="symbol">https:</span>/<span class="regexp">/developer.chrome.com/extensions</span><span class="regexp">/debugger
+
+http:/</span><span class="regexp">/developer.android.com/tools</span><span class="regexp">/extras/oem</span>-usb.html
+
+<span class="symbol">http:</span>/<span class="regexp">/developer.android.com/tools</span><span class="regexp">/device.html
+
+&amp;nbsp;
+
+&amp;nbsp;</span>
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/10/06/e6-b7-b1-e5-ba-a6-e7-90-86-e8-a7-a3git/" rel="prev">深度理解git</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/08/18/e7-89-88-e6-9c-ac-e5-8f-b7-e7-9a-84-e8-af-ad-e4-b9-89-e5-8c-96/" rel="next">版本号的语义化</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/"
+                   data-title="android webview远程调试" data-url="http://www.soledad.com.cn/2014/08/18/android-webview-e8-bf-9c-e7-a8-8b-e8-b0-83-e8-af-95/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="水御双氛" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">水御双氛</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">一个前端的内心独白</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Carlos guo</span>
+</div>
+
+
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"soledad"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
